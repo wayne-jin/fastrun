@@ -1,6 +1,7 @@
 # Summary
 
-* [C++](README.md)
+* [Introduction](README.md)
+* [C++](C++.md)
     * [基本语法](C++/基本语法.md)
         * [static](C++/基本语法/static.md)
         * [const](C++/基本语法/const.md)
