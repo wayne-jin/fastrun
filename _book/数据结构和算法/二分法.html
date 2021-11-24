@@ -107,9 +107,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.1" data-path="../C++/">
+        <li class="chapter " data-level="1.1.1" data-path="../C++/基本语法.html">
             
-                <a href="../C++/">
+                <a href="../C++/基本语法.html">
             
                     
                     基本语法
@@ -178,9 +178,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2" data-path="../C++/">
+        <li class="chapter " data-level="1.1.2" data-path="../C++/指针和引用.html">
             
-                <a href="../C++/">
+                <a href="../C++/指针和引用.html">
             
                     
                     指针和引用
@@ -2144,6 +2144,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8.2.15" data-path="../游戏服务器/技术/服务器性能瓶颈.html">
+            
+                <a href="../游戏服务器/技术/服务器性能瓶颈.html">
+            
+                    
+                    服务器性能瓶颈
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2151,6 +2164,19 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../python.html">
+            
+                <a href="../python.html">
+            
+                    
+                    python
+            
+                </a>
+            
+
             
         </li>
     
@@ -2200,6 +2226,128 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4E8C;&#x5206;&#x6CD5;">&#x4E8C;&#x5206;&#x6CD5;</h1>
+<h3 id="&#x8BE6;&#x89E3;&#x4E8C;&#x5206;&#x67E5;&#x627E;">&#x8BE6;&#x89E3;&#x4E8C;&#x5206;&#x67E5;&#x627E;</h3>
+<p><strong>&#x4E8C;&#x5206;&#x6CD5;&#x57FA;&#x672C;&#x601D;&#x60F3;</strong></p>
+<p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x662F;&#x5C06; n &#x4E2A;&#x5143;&#x7D20;&#x5206;&#x6210;&#x5927;&#x81F4;&#x76F8;&#x7B49;&#x7684;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x53D6; a[n/2]a[n/2] &#x4E0E; x &#x505A;&#x6BD4;&#x8F83;&#xFF1A;</p>
+<p>&#x5982;&#x679C; x=a[n/2]x=a[n/2] , &#x5219;&#x627E;&#x5230; x , &#x7B97;&#x6CD5;&#x4E2D;&#x6B62;
+&#x5982;&#x679C; x<a[n 2]x<a[n="" 2]="" ,="" 则只需要在数组="" a="" 的左半部分继续搜索="" x="" 如果="">a[n/2]x&gt;a[n/2] , &#x5219;&#x53EA;&#x9700;&#x8981;&#x5728;&#x6570;&#x7EC4; a &#x7684;&#x53F3;&#x534A;&#x90E8;&#x5206;&#x7EE7;&#x7EED;&#x641C;&#x7D22; x  </a[n></p>
+<p><strong>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong></p>
+<p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5206;&#x6CBB;&#x6CD5;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x5176;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;O(logn)  </p>
+<p><strong>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x9002;&#x7528;&#x573A;&#x666F;</strong></p>
+<p>&#x4E8C;&#x5206;&#x6CD5;&#x867D;&#x7136;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C0F;&#x4E8E;O(1)&#xFF0C;&#x4F46;&#x4E5F;&#x4E0D;&#x662F;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x65E0;&#x8111;&#x4F7F;&#x7528;&#x4E8C;&#x5206;&#x6CD5;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x9898;&#x76EE;&#x51FA;&#x7EBF;&#x4EE5;&#x4E0B;&#x7279;&#x6027;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E94;&#x8BE5;&#x7ACB;&#x5373;&#x8054;&#x60F3;&#x5230;&#x5B83;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E8C;&#x5206;&#x6CD5;&#x4E86;</p>
+<ul>
+<li>&#x5F85;&#x67E5;&#x627E;&#x7684;&#x6570;&#x7EC4;<strong>&#x6709;&#x5E8F;</strong>&#x6216;&#x8005;<strong>&#x90E8;&#x5206;&#x6709;&#x5E8F;</strong></li>
+<li>&#x8981;&#x6C42;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F4E;&#x4E8E;O(n)&#xFF0C;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x8981;&#x6C42;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(logn)  </li>
+</ul>
+<h3 id="&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x89E3;&#x9898;&#x6A21;&#x677F;">&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x89E3;&#x9898;&#x6A21;&#x677F;</h3>
+<ul>
+<li><p>&#x641C;&#x7D22;&#x4E00;&#x4E2A;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x7D22;&#x5F15;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; -1</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">binarySearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+    <span class="hljs-keyword">int</span> left = <span class="hljs-number">0</span>; 
+    <span class="hljs-keyword">int</span> right = nums.length - <span class="hljs-number">1</span>; <span class="hljs-comment">// &#x6CE8;&#x610F;1</span>
+
+    <span class="hljs-keyword">while</span>(left &lt;= right) {   <span class="hljs-comment">//&#x6CE8;&#x610F;2</span>
+        <span class="hljs-keyword">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>; <span class="hljs-comment">//&#x6CE8;&#x610F;3</span>
+        <span class="hljs-keyword">if</span>(nums[mid] == target)      
+            <span class="hljs-keyword">return</span> mid; 
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target)
+            left = mid + <span class="hljs-number">1</span>; <span class="hljs-comment">// &#x6CE8;&#x610F;4</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target)
+            right = mid - <span class="hljs-number">1</span>; <span class="hljs-comment">// &#x6CE8;&#x610F;4</span>
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+}
+</code></pre>
+<ul>
+<li><p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;1&#xFF1A;</p>
+<p>&#x6709;&#x65F6;&#x5019;right&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#x4E3A;<code>nums.length-1</code>&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#x4E3A;<code>nums.length</code>&#xFF0C;&#x8FD9;&#x4E8C;&#x8005;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x5728;&#x4E0D;&#x540C;&#x529F;&#x80FD;&#x7684;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x4E2D;&#x3002;&#x533A;&#x522B;&#x662F;&#xFF1A;&#x524D;&#x8005;&#x76F8;&#x5F53;&#x4E8E;&#x4E24;&#x8FB9;&#x90FD;&#x662F;&#x95ED;&#x533A;&#x95F4;<code>[left,right]</code>&#xFF0C;&#x540E;&#x8005;&#x76F8;&#x5F53;&#x4E8E;&#x5DE6;&#x95ED;&#x53F3;&#x5F00;&#x533A;&#x95F4;<code>[left,right)</code>&#xFF0C;&#x56E0;&#x4E3A;&#x7D22;&#x5F15;&#x5927;&#x5C0F;<code>nums.length</code>&#x8D8A;&#x754C;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x573A;&#x666F;&#x4E0B;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x524D;&#x8005;<code>[left,right]</code>&#x4E24;&#x8FB9;&#x90FD;&#x95ED;&#x5408;&#x7684;&#x533A;&#x95F4;&#x3002;<strong>&#x8FD9;&#x4E2A;&#x533A;&#x95F4;&#x5C31;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x8FDB;&#x884C;&#x641C;&#x7D22;&#x7684;&#x533A;&#x95F4;</strong></p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;2&#xFF1A;</p>
+<p>&#x8FD9;&#x91CC;&#x4E0D;&#x5199;<code>int mid = (left+right)/2</code>&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;<code>left+right</code>&#x7684;&#x548C;&#x6EA2;&#x51FA;int</p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;3&#xFF1A;</p>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x5199;<code>while(left&lt;=right)</code>&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x5199;<code>whlie(left&lt;right)</code>&#xFF0C;&#x8FD9;&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x524D;&#x8005;&#x7684;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#x662F;<code>left == right+1</code> &#x7528;&#x533A;&#x95F4;&#x8868;&#x793A;&#x7684;&#x8BDD;&#x5C31;&#x662F;<code>[right+1,right]</code>&#xFF0C;&#x90A3;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x6570;&#x5B57;&#x65E2;&#x5927;&#x4E8E;right+1&#x53C8;&#x5C0F;&#x4E8E;right&#x5427;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;<strong>&#x533A;&#x95F4;&#x4E3A;&#x7A7A;</strong>&#xFF0C;while&#x5FAA;&#x73AF;&#x7EC8;&#x6B62;&#x662F;&#x6B63;&#x786E;&#x7684;
+<code>while(left&lt;right)</code>&#x7684;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#x662F;<code>left==right</code>&#xFF0C;&#x5199;&#x6210;&#x533A;&#x95F4;&#x7684;&#x5F62;&#x5F0F;&#x5C31;&#x662F;<code>[right,right]</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;<strong>&#x533A;&#x95F4;&#x975E;&#x7A7A;</strong>&#xFF0C;&#x4F46;&#x6B64;&#x65F6;while&#x5FAA;&#x73AF;&#x7EC8;&#x6B62;&#x4E86;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B58;&#x5728;&#x91CD;&#x590D;&#x5143;&#x7D20;&#x7684;&#x5224;&#x5B9A;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x95EE;&#x9898;</p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;4&#xFF1A;</p>
+<p>&#x6709;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5199;<code>left = mid + 1</code>,<code>right = mid - 1</code>&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x5199;<code>left = mid</code>,<code>right = mid</code>&#x6CA1;&#x6709;&#x52A0;&#x52A0;&#x51CF;&#x51CF;&#xFF0C;&#x5230;&#x5E95;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x5199;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<p>&#x5F53;&#x641C;&#x7D22;&#x533A;&#x95F4;&#x662F;&#x4E24;&#x7AEF;&#x90FD;&#x95ED;&#x5408;&#x7684;&#x65F6;&#x5019;&#x5373;<code>[left,right]</code>&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x4E86;&#x7D22;&#x5F15;<code>mid</code>&#x5E76;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x627E;&#x7684;<code>target</code>&#x65F6;&#xFF0C;&#x4E0B;&#x4E00;&#x6B65;&#x8BE5;&#x641C;&#x7D22;&#x54EA;&#x91CC;&#x5462;</p>
+<p>&#x5F53;&#x7136;&#x662F;&#x53BB;&#x641C;&#x7D22; <code>[left, mid-1]</code> &#x6216;&#x8005; <code>[mid+1, right]</code> &#x5BF9;&#x4E0D;&#x5BF9;&#xFF1F;<strong>&#x56E0;&#x4E3A; <code>mid</code> &#x5DF2;&#x7ECF;&#x641C;&#x7D22;&#x8FC7;&#xFF0C;&#x5E94;&#x8BE5;&#x4ECE;&#x641C;&#x7D22;&#x533A;&#x95F4;&#x4E2D;&#x53BB;&#x9664;</strong></p>
+</li>
+</ul>
+</li>
+<li><p>&#x7B97;&#x6CD5;&#x7F3A;&#x9677;</p>
+<p>&#x6BD4;&#x5982;&#x8BF4;&#x7ED9;&#x4F60;&#x6709;&#x5E8F;&#x6570;&#x7EC4; nums = [1,2,2,2,3]&#xFF0C;target &#x4E3A; 2&#xFF0C;&#x6B64;&#x7B97;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x7D22;&#x5F15;&#x662F; 2&#xFF0C;&#x6CA1;&#x9519;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6211;&#x60F3;&#x5F97;&#x5230; target &#x7684;&#x5DE6;&#x4FA7;&#x8FB9;&#x754C;&#xFF0C;&#x5373;&#x7D22;&#x5F15; 1&#xFF0C;&#x6216;&#x8005;&#x6211;&#x60F3;&#x5F97;&#x5230; target &#x7684;&#x53F3;&#x4FA7;&#x8FB9;&#x754C;&#xFF0C;&#x5373;&#x7D22;&#x5F15; 3&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x6B64;&#x7B97;&#x6CD5;&#x662F;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#x7684;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x7684;&#x9700;&#x6C42;&#x5F88;&#x5E38;&#x89C1;&#xFF0C;&#x4F60;&#x4E5F;&#x8BB8;&#x4F1A;&#x8BF4;&#xFF0C;&#x627E;&#x5230;&#x4E00;&#x4E2A; target&#xFF0C;&#x7136;&#x540E;&#x5411;&#x5DE6;&#x6216;&#x5411;&#x53F3;&#x7EBF;&#x6027;&#x641C;&#x7D22;&#x4E0D;&#x884C;&#x5417;&#xFF1F;&#x53EF;&#x4EE5;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x597D;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x96BE;&#x4EE5;&#x4FDD;&#x8BC1;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x5BF9;&#x6570;&#x7EA7;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x4E86;  </p>
+</li>
+</ul>
+<h3 id="&#x5BFB;&#x627E;&#x5DE6;&#x8FB9;&#x754C;&#x7684;&#x4E8C;&#x5206;&#x67E5;&#x627E;">&#x5BFB;&#x627E;&#x5DE6;&#x8FB9;&#x754C;&#x7684;&#x4E8C;&#x5206;&#x67E5;&#x627E;</h3>
+<ul>
+<li><p>&#x4EE5;&#x4E0B;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x4EE3;&#x7801;&#x5F62;&#x5F0F;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x6807;&#x8BB0;&#x662F;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7EC6;&#x8282;</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">left_bound</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">int</span> left = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> right = nums.length; <span class="hljs-comment">// &#x6CE8;&#x610F;1</span>
+
+    <span class="hljs-keyword">while</span> (left &lt; right) { <span class="hljs-comment">// &#x6CE8;&#x610F;2</span>
+        <span class="hljs-keyword">int</span> mid = (left + right) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (nums[mid] == target) {
+            right = mid;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
+            left = mid + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
+            right = mid; <span class="hljs-comment">// &#x6CE8;&#x610F;3</span>
+        }
+    }
+    <span class="hljs-keyword">return</span> left;
+}
+</code></pre>
+<ul>
+<li><p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;1&#xFF1A;</p>
+<p>&#x56E0;&#x4E3A;<code>right = nums.length</code>&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x7684;&#x641C;&#x7D22;&#x533A;&#x95F4;&#x662F;<code>[left,right)</code>&#x5DE6;&#x95ED;&#x53F3;&#x5F00;&#x533A;&#x95F4;</p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;2&#xFF1A;</p>
+<p><code>while(left&lt;right)</code>&#x7684;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#x662F;<code>left == right</code>&#x6B64;&#x65F6;&#x641C;&#x7D22;&#x533A;&#x95F4;[left,right)&#x4E3A;&#x7A7A;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x4E2D;&#x6B62;</p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;3&#xFF1A;</p>
+<p>&#x8FD9;&#x4E2A;&#x5F88;&#x597D;&#x89E3;&#x91CA;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x300C;&#x641C;&#x7D22;&#x533A;&#x95F4;&#x300D;&#x662F; [left, right) &#x5DE6;&#x95ED;&#x53F3;&#x5F00;&#xFF0C;&#x6240;&#x4EE5;&#x5F53; nums[mid] &#x88AB;&#x68C0;&#x6D4B;&#x4E4B;&#x540E;&#xFF0C;&#x4E0B;&#x4E00;&#x6B65;&#x7684;&#x641C;&#x7D22;&#x533A;&#x95F4;&#x5E94;&#x8BE5;&#x53BB;&#x6389; mid &#x5206;&#x5272;&#x6210;&#x4E24;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x5373; [left, mid) &#x6216; [mid + 1, right)  </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x5BFB;&#x627E;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x4E8C;&#x5206;&#x67E5;&#x627E;">&#x5BFB;&#x627E;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x4E8C;&#x5206;&#x67E5;&#x627E;</h3>
+<ul>
+<li><p>&#x7C7B;&#x4F3C;&#x4E8E;&#x5BFB;&#x627E;&#x5DE6;&#x8FB9;&#x754C;</p>
+<pre><code class="lang-C++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">right_bound</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">int</span> left = <span class="hljs-number">0</span>, right = nums.length;
+
+    <span class="hljs-keyword">while</span> (left &lt; right) {
+        <span class="hljs-keyword">int</span> mid = (left + right) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (nums[mid] == target) {
+            left = mid + <span class="hljs-number">1</span>; 
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
+            left = mid + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
+            right = mid;
+        }
+    }
+    <span class="hljs-keyword">return</span> left - <span class="hljs-number">1</span>; <span class="hljs-comment">// &#x6CE8;&#x610F;1</span>
+}
+</code></pre>
+<ul>
+<li><p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;1</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x6700;&#x540E;&#x8FD4;&#x56DE;<code>left-1</code>&#x800C;&#x4E0D;&#x50CF;&#x5DE6;&#x4FA7;&#x8FB9;&#x754C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;<code>left</code>&#x800C;&#x4E14;&#x5982;&#x679C;&#x641C;&#x7D22;&#x53F3;&#x8FB9;&#x7684;&#x8BDD;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;<code>right</code>&#x4E0D;&#x662F;&#x66F4;&#x597D;</p>
+<p>&#x56E0;&#x4E3A;while&#x7684;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#x662F;<code>left == right</code>&#xFF0C;&#x6240;&#x4EE5;<code>left</code>&#x548C;<code>right</code>&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;<code>right-1</code>&#x5173;&#x952E;&#x5728;&#x4E8E;&#x8FD9;&#x4E2A;&#x6761;&#x4EF6;&#x7684;&#x5224;&#x65AD;</p>
+<pre><code class="lang-C++"><span class="hljs-keyword">if</span> (nums[mid] == target) {
+    left = mid + <span class="hljs-number">1</span>;
+    <span class="hljs-comment">// &#x8FD9;&#x6837;&#x60F3;: mid = left - 1</span>
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5BF9; left &#x7684;&#x66F4;&#x65B0;&#x5FC5;&#x987B;&#x662F; left = mid + 1&#xFF0C;&#x5C31;&#x662F;&#x8BF4; while &#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#x65F6;&#xFF0C;nums[left] &#x4E00;&#x5B9A;&#x4E0D;&#x7B49;&#x4E8E; target &#x4E86;&#xFF0C;&#x800C; nums[left-1] &#x53EF;&#x80FD;&#x662F; target</p>
+</li>
+</ul>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -2243,7 +2391,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"二分法","level":"1.7.1","depth":2,"next":{"title":"游戏服务器","level":"1.8","depth":1,"path":"游戏服务器.md","ref":"游戏服务器.md","articles":[{"title":"业务","level":"1.8.1","depth":2,"path":"游戏服务器/业务.md","ref":"游戏服务器/业务.md","articles":[{"title":"邮件","level":"1.8.1.1","depth":3,"path":"游戏服务器/业务/邮件.md","ref":"游戏服务器/业务/邮件.md","articles":[]},{"title":"聊天","level":"1.8.1.2","depth":3,"path":"游戏服务器/业务/聊天.md","ref":"游戏服务器/业务/聊天.md","articles":[]},{"title":"充值","level":"1.8.1.3","depth":3,"path":"游戏服务器/业务/充值.md","ref":"游戏服务器/业务/充值.md","articles":[]},{"title":"雪花算法","level":"1.8.1.4","depth":3,"path":"游戏服务器/业务/雪花算法.md","ref":"游戏服务器/业务/雪花算法.md","articles":[]}]},{"title":"技术","level":"1.8.2","depth":2,"path":"游戏服务器/技术.md","ref":"游戏服务器/技术.md","articles":[{"title":"帧同步和状态同步","level":"1.8.2.1","depth":3,"path":"游戏服务器/技术/帧同步和状态同步.md","ref":"游戏服务器/技术/帧同步和状态同步.md","articles":[]},{"title":"排行榜","level":"1.8.2.2","depth":3,"path":"游戏服务器/技术/排行榜.md","ref":"游戏服务器/技术/排行榜.md","articles":[]},{"title":"敏感词过滤","level":"1.8.2.3","depth":3,"path":"游戏服务器/技术/敏感词过滤.md","ref":"游戏服务器/技术/敏感词过滤.md","articles":[]},{"title":"洗牌算法","level":"1.8.2.4","depth":3,"path":"游戏服务器/技术/洗牌算法.md","ref":"游戏服务器/技术/洗牌算法.md","articles":[]},{"title":"AOI","level":"1.8.2.5","depth":3,"path":"游戏服务器/技术/AOI.md","ref":"游戏服务器/技术/AOI.md","articles":[]},{"title":"自动寻路","level":"1.8.2.6","depth":3,"path":"游戏服务器/技术/自动寻路.md","ref":"游戏服务器/技术/自动寻路.md","articles":[]},{"title":"分布式架构","level":"1.8.2.7","depth":3,"path":"游戏服务器/技术/分布式架构.md","ref":"游戏服务器/技术/分布式架构.md","articles":[]},{"title":"交互通信协议的设计","level":"1.8.2.8","depth":3,"path":"游戏服务器/技术/交互通信协议的设计.md","ref":"游戏服务器/技术/交互通信协议的设计.md","articles":[]},{"title":"场景管理","level":"1.8.2.9","depth":3,"path":"游戏服务器/技术/场景管理.md","ref":"游戏服务器/技术/场景管理.md","articles":[]},{"title":"负载均衡","level":"1.8.2.10","depth":3,"path":"游戏服务器/技术/负载均衡.md","ref":"游戏服务器/技术/负载均衡.md","articles":[]},{"title":"问题的定位分析","level":"1.8.2.11","depth":3,"path":"游戏服务器/技术/问题的定位分析.md","ref":"游戏服务器/技术/问题的定位分析.md","articles":[]},{"title":"定时器","level":"1.8.2.12","depth":3,"path":"游戏服务器/技术/定时器.md","ref":"游戏服务器/技术/定时器.md","articles":[]},{"title":"消息队列","level":"1.8.2.13","depth":3,"path":"游戏服务器/技术/消息队列.md","ref":"游戏服务器/技术/消息队列.md","articles":[]},{"title":"微服务与RPC","level":"1.8.2.14","depth":3,"path":"游戏服务器/技术/微服务与RPC.md","ref":"游戏服务器/技术/微服务与RPC.md","articles":[]}]}]},"previous":{"title":"数据结构和算法","level":"1.7","depth":1,"path":"数据结构和算法.md","ref":"数据结构和算法.md","articles":[{"title":"二分法","level":"1.7.1","depth":2,"path":"数据结构和算法/二分法.md","ref":"数据结构和算法/二分法.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Run","language":"zh-hans","gitbook":"*","description":"知识树"},"file":{"path":"数据结构和算法/二分法.md","mtime":"2021-11-20T13:45:36.696Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-21T14:20:54.062Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"二分法","level":"1.7.1","depth":2,"next":{"title":"游戏服务器","level":"1.8","depth":1,"path":"游戏服务器.md","ref":"游戏服务器.md","articles":[{"title":"业务","level":"1.8.1","depth":2,"path":"游戏服务器/业务.md","ref":"游戏服务器/业务.md","articles":[{"title":"邮件","level":"1.8.1.1","depth":3,"path":"游戏服务器/业务/邮件.md","ref":"游戏服务器/业务/邮件.md","articles":[]},{"title":"聊天","level":"1.8.1.2","depth":3,"path":"游戏服务器/业务/聊天.md","ref":"游戏服务器/业务/聊天.md","articles":[]},{"title":"充值","level":"1.8.1.3","depth":3,"path":"游戏服务器/业务/充值.md","ref":"游戏服务器/业务/充值.md","articles":[]},{"title":"雪花算法","level":"1.8.1.4","depth":3,"path":"游戏服务器/业务/雪花算法.md","ref":"游戏服务器/业务/雪花算法.md","articles":[]}]},{"title":"技术","level":"1.8.2","depth":2,"path":"游戏服务器/技术.md","ref":"游戏服务器/技术.md","articles":[{"title":"帧同步和状态同步","level":"1.8.2.1","depth":3,"path":"游戏服务器/技术/帧同步和状态同步.md","ref":"游戏服务器/技术/帧同步和状态同步.md","articles":[]},{"title":"排行榜","level":"1.8.2.2","depth":3,"path":"游戏服务器/技术/排行榜.md","ref":"游戏服务器/技术/排行榜.md","articles":[]},{"title":"敏感词过滤","level":"1.8.2.3","depth":3,"path":"游戏服务器/技术/敏感词过滤.md","ref":"游戏服务器/技术/敏感词过滤.md","articles":[]},{"title":"洗牌算法","level":"1.8.2.4","depth":3,"path":"游戏服务器/技术/洗牌算法.md","ref":"游戏服务器/技术/洗牌算法.md","articles":[]},{"title":"AOI","level":"1.8.2.5","depth":3,"path":"游戏服务器/技术/AOI.md","ref":"游戏服务器/技术/AOI.md","articles":[]},{"title":"自动寻路","level":"1.8.2.6","depth":3,"path":"游戏服务器/技术/自动寻路.md","ref":"游戏服务器/技术/自动寻路.md","articles":[]},{"title":"分布式架构","level":"1.8.2.7","depth":3,"path":"游戏服务器/技术/分布式架构.md","ref":"游戏服务器/技术/分布式架构.md","articles":[]},{"title":"交互通信协议的设计","level":"1.8.2.8","depth":3,"path":"游戏服务器/技术/交互通信协议的设计.md","ref":"游戏服务器/技术/交互通信协议的设计.md","articles":[]},{"title":"场景管理","level":"1.8.2.9","depth":3,"path":"游戏服务器/技术/场景管理.md","ref":"游戏服务器/技术/场景管理.md","articles":[]},{"title":"负载均衡","level":"1.8.2.10","depth":3,"path":"游戏服务器/技术/负载均衡.md","ref":"游戏服务器/技术/负载均衡.md","articles":[]},{"title":"问题的定位分析","level":"1.8.2.11","depth":3,"path":"游戏服务器/技术/问题的定位分析.md","ref":"游戏服务器/技术/问题的定位分析.md","articles":[]},{"title":"定时器","level":"1.8.2.12","depth":3,"path":"游戏服务器/技术/定时器.md","ref":"游戏服务器/技术/定时器.md","articles":[]},{"title":"消息队列","level":"1.8.2.13","depth":3,"path":"游戏服务器/技术/消息队列.md","ref":"游戏服务器/技术/消息队列.md","articles":[]},{"title":"微服务与RPC","level":"1.8.2.14","depth":3,"path":"游戏服务器/技术/微服务与RPC.md","ref":"游戏服务器/技术/微服务与RPC.md","articles":[]},{"title":"服务器性能瓶颈","level":"1.8.2.15","depth":3,"path":"游戏服务器/技术/服务器性能瓶颈.md","ref":"游戏服务器/技术/服务器性能瓶颈.md","articles":[]}]}]},"previous":{"title":"数据结构和算法","level":"1.7","depth":1,"path":"数据结构和算法.md","ref":"数据结构和算法.md","articles":[{"title":"二分法","level":"1.7.1","depth":2,"path":"数据结构和算法/二分法.md","ref":"数据结构和算法/二分法.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Run","language":"zh-hans","gitbook":"*","description":"知识树"},"file":{"path":"数据结构和算法/二分法.md","mtime":"2021-11-24T06:55:36.345Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-24T07:13:05.598Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
