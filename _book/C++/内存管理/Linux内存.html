@@ -1,0 +1,3214 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linux内存 · Run</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Jin">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../C++11.html" />
+    
+    
+    <link rel="prev" href="new和malloc.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../C++.html">
+            
+                <a href="../../C++.html">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../基本语法.html">
+            
+                <a href="../基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../基本语法/static.html">
+            
+                <a href="../基本语法/static.html">
+            
+                    
+                    static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../基本语法/const.html">
+            
+                <a href="../基本语法/const.html">
+            
+                    
+                    const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../基本语法/inline.html">
+            
+                <a href="../基本语法/inline.html">
+            
+                    
+                    inline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../基本语法/四种cast转换.html">
+            
+                <a href="../基本语法/四种cast转换.html">
+            
+                    
+                    四种cast转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../指针和引用.html">
+            
+                <a href="../指针和引用.html">
+            
+                    
+                    指针和引用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../指针和引用/指针和引用的区别.html">
+            
+                <a href="../指针和引用/指针和引用的区别.html">
+            
+                    
+                    指针和引用的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../指针和引用/this指针.html">
+            
+                <a href="../指针和引用/this指针.html">
+            
+                    
+                    this指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../指针和引用/野指针.html">
+            
+                <a href="../指针和引用/野指针.html">
+            
+                    
+                    野指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../类与对象.html">
+            
+                <a href="../类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../类与对象/面向对象三大特性.html">
+            
+                <a href="../类与对象/面向对象三大特性.html">
+            
+                    
+                    面向对象三大特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../类与对象/RTTI.html">
+            
+                <a href="../类与对象/RTTI.html">
+            
+                    
+                    RTTI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../类与对象/重载重写隐藏.html">
+            
+                <a href="../类与对象/重载重写隐藏.html">
+            
+                    
+                    重载重写隐藏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../类与对象/虚函数机制.html">
+            
+                <a href="../类与对象/虚函数机制.html">
+            
+                    
+                    虚函数机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../类与对象/虚函数常见问题.html">
+            
+                <a href="../类与对象/虚函数常见问题.html">
+            
+                    
+                    虚函数常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../类与对象/纯虚函数.html">
+            
+                <a href="../类与对象/纯虚函数.html">
+            
+                    
+                    纯虚函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../类与对象/虚基类.html">
+            
+                <a href="../类与对象/虚基类.html">
+            
+                    
+                    虚基类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../类与对象/友元.html">
+            
+                <a href="../类与对象/友元.html">
+            
+                    
+                    友元
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../构造与析构.html">
+            
+                <a href="../构造与析构.html">
+            
+                    
+                    构造与析构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../构造与析构/对象构造过程.html">
+            
+                <a href="../构造与析构/对象构造过程.html">
+            
+                    
+                    对象构造过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../构造与析构/生成默认构造函数.html">
+            
+                <a href="../构造与析构/生成默认构造函数.html">
+            
+                    
+                    生成默认构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../构造与析构/拷贝构造函数.html">
+            
+                <a href="../构造与析构/拷贝构造函数.html">
+            
+                    
+                    拷贝构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../构造与析构/禁止拷贝.html">
+            
+                <a href="../构造与析构/禁止拷贝.html">
+            
+                    
+                    禁止拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../构造与析构/对象析构过程.html">
+            
+                <a href="../构造与析构/对象析构过程.html">
+            
+                    
+                    对象析构过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../内存管理.html">
+            
+                <a href="../内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="内存对齐.html">
+            
+                <a href="内存对齐.html">
+            
+                    
+                    内存对齐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="内存分配方式.html">
+            
+                <a href="内存分配方式.html">
+            
+                    
+                    内存分配方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="简单对象.html">
+            
+                <a href="简单对象.html">
+            
+                    
+                    简单对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="常见的内存错误.html">
+            
+                <a href="常见的内存错误.html">
+            
+                    
+                    常见的内存错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="内存泄漏.html">
+            
+                <a href="内存泄漏.html">
+            
+                    
+                    内存泄漏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="深拷贝与浅拷贝.html">
+            
+                <a href="深拷贝与浅拷贝.html">
+            
+                    
+                    深拷贝和浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="程序编译过程.html">
+            
+                <a href="程序编译过程.html">
+            
+                    
+                    程序编译过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.8" data-path="new和malloc.html">
+            
+                <a href="new和malloc.html">
+            
+                    
+                    new和malloc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5.9" data-path="Linux内存.html">
+            
+                <a href="Linux内存.html">
+            
+                    
+                    Linux内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../C++11.html">
+            
+                <a href="../C++11.html">
+            
+                    
+                    C++11
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../C++11/auto&decltype.html">
+            
+                <a href="../C++11/auto&decltype.html">
+            
+                    
+                    auto/decltype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../C++11/overrride&final.html">
+            
+                <a href="../C++11/overrride&final.html">
+            
+                    
+                    overrride&final
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../C++11/default&delete.html">
+            
+                <a href="../C++11/default&delete.html">
+            
+                    
+                    default&delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../C++11/explicit.html">
+            
+                <a href="../C++11/explicit.html">
+            
+                    
+                    explicit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../C++11/委托构造函数.html">
+            
+                <a href="../C++11/委托构造函数.html">
+            
+                    
+                    委托构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="../C++11/成员初始化列表.html">
+            
+                <a href="../C++11/成员初始化列表.html">
+            
+                    
+                    成员初始化列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.7" data-path="../C++11/lambda.html">
+            
+                <a href="../C++11/lambda.html">
+            
+                    
+                    lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.8" data-path="../C++11/智能指针.html">
+            
+                <a href="../C++11/智能指针.html">
+            
+                    
+                    智能指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.9" data-path="../C++11/nullptr.html">
+            
+                <a href="../C++11/nullptr.html">
+            
+                    
+                    nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../右值.html">
+            
+                <a href="../右值.html">
+            
+                    
+                    右值
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../右值/左值与右值.html">
+            
+                <a href="../右值/左值与右值.html">
+            
+                    
+                    左值与右值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="../右值/右值引用.html">
+            
+                <a href="../右值/右值引用.html">
+            
+                    
+                    右值引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="../右值/移动语义.html">
+            
+                <a href="../右值/移动语义.html">
+            
+                    
+                    移动语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="../右值/完美转发.html">
+            
+                <a href="../右值/完美转发.html">
+            
+                    
+                    完美转发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../模板.html">
+            
+                <a href="../模板.html">
+            
+                    
+                    模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../STL.html">
+            
+                <a href="../STL.html">
+            
+                    
+                    STL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="../STL/容器的底层实现及特点.html">
+            
+                <a href="../STL/容器的底层实现及特点.html">
+            
+                    
+                    容器的底层实现及特点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="../STL/如何解决hash冲突.html">
+            
+                <a href="../STL/如何解决hash冲突.html">
+            
+                    
+                    如何解决hash冲突
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.3" data-path="../STL/空间配置器.html">
+            
+                <a href="../STL/空间配置器.html">
+            
+                    
+                    空间配置器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.4" data-path="../STL/萃取机制.html">
+            
+                <a href="../STL/萃取机制.html">
+            
+                    
+                    萃取机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.5" data-path="../STL/迭代器失效.html">
+            
+                <a href="../STL/迭代器失效.html">
+            
+                    
+                    迭代器失效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.6" data-path="../STL/push_back的整个过程.html">
+            
+                <a href="../STL/push_back的整个过程.html">
+            
+                    
+                    push_back的整个过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../C++多线程.html">
+            
+                <a href="../C++多线程.html">
+            
+                    
+                    C++多线程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.10.1" data-path="../C++多线程/读写锁的实现.html">
+            
+                <a href="../C++多线程/读写锁的实现.html">
+            
+                    
+                    读写锁的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.2" data-path="../C++多线程/四种锁.html">
+            
+                <a href="../C++多线程/四种锁.html">
+            
+                    
+                    四种锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.3" data-path="../C++多线程/线程池.html">
+            
+                <a href="../C++多线程/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../操作系统.html">
+            
+                <a href="../../操作系统.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../操作系统/大小端.html">
+            
+                <a href="../../操作系统/大小端.html">
+            
+                    
+                    大小端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../操作系统/内核态和用户态.html">
+            
+                <a href="../../操作系统/内核态和用户态.html">
+            
+                    
+                    内核态和用户态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../操作系统/进程的基本操作.html">
+            
+                <a href="../../操作系统/进程的基本操作.html">
+            
+                    
+                    进程的基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../操作系统/孤儿进程，僵尸进程，守护进程.html">
+            
+                <a href="../../操作系统/孤儿进程，僵尸进程，守护进程.html">
+            
+                    
+                    孤儿进程，僵尸进程，守护进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../操作系统/进程的状态，切换，调度.html">
+            
+                <a href="../../操作系统/进程的状态，切换，调度.html">
+            
+                    
+                    进程的状态，切换，调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../操作系统/进程间通信方式.html">
+            
+                <a href="../../操作系统/进程间通信方式.html">
+            
+                    
+                    进程间通信方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../操作系统/进程和线程的区别.html">
+            
+                <a href="../../操作系统/进程和线程的区别.html">
+            
+                    
+                    进程和线程的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../操作系统/多线程模型.html">
+            
+                <a href="../../操作系统/多线程模型.html">
+            
+                    
+                    多线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../操作系统/进程与线程的同步.html">
+            
+                <a href="../../操作系统/进程与线程的同步.html">
+            
+                    
+                    进程与线程的同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../操作系统/虚拟内存.html">
+            
+                <a href="../../操作系统/虚拟内存.html">
+            
+                    
+                    虚拟内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../操作系统/页面置换算法.html">
+            
+                <a href="../../操作系统/页面置换算法.html">
+            
+                    
+                    页面置换算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../操作系统/死锁的产生和避免.html">
+            
+                <a href="../../操作系统/死锁的产生和避免.html">
+            
+                    
+                    死锁的产生和避免
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../操作系统/协程.html">
+            
+                <a href="../../操作系统/协程.html">
+            
+                    
+                    协程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../../操作系统/写时复制.html">
+            
+                <a href="../../操作系统/写时复制.html">
+            
+                    
+                    写时复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../../操作系统/进程调度算法.html">
+            
+                <a href="../../操作系统/进程调度算法.html">
+            
+                    
+                    进程调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../网络.html">
+            
+                <a href="../../网络.html">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../网络/OSI七层协议.html">
+            
+                <a href="../../网络/OSI七层协议.html">
+            
+                    
+                    OSI七层协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../网络/TCP.html">
+            
+                <a href="../../网络/TCP.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../网络/TCP/TCP报文信息.html">
+            
+                <a href="../../网络/TCP/TCP报文信息.html">
+            
+                    
+                    TCP报文信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../网络/TCP/连接建立.html">
+            
+                <a href="../../网络/TCP/连接建立.html">
+            
+                    
+                    连接建立
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../网络/TCP/连接断开.html">
+            
+                <a href="../../网络/TCP/连接断开.html">
+            
+                    
+                    连接断开
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../网络/TCP/TCP如何保证可靠性.html">
+            
+                <a href="../../网络/TCP/TCP如何保证可靠性.html">
+            
+                    
+                    TCP如何保证可靠性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../网络/TCP/TCP粘包问题.html">
+            
+                <a href="../../网络/TCP/TCP粘包问题.html">
+            
+                    
+                    TCP粘包问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../网络/TCP/TCP中的定时器.html">
+            
+                <a href="../../网络/TCP/TCP中的定时器.html">
+            
+                    
+                    TCP中的定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../网络/TCP和UDP区别.html">
+            
+                <a href="../../网络/TCP和UDP区别.html">
+            
+                    
+                    TCP和UDP区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../网络/KCP.html">
+            
+                <a href="../../网络/KCP.html">
+            
+                    
+                    KCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../网络/HTTP.html">
+            
+                <a href="../../网络/HTTP.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../网络/HTTP/请你来说一说HTTP协议.html">
+            
+                <a href="../../网络/HTTP/请你来说一说HTTP协议.html">
+            
+                    
+                    请你来说一说HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../../网络/HTTP/GET和POST的区别.html">
+            
+                <a href="../../网络/HTTP/GET和POST的区别.html">
+            
+                    
+                    GET和POST的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../../网络/HTTP/HTTP各版本的区别.html">
+            
+                <a href="../../网络/HTTP/HTTP各版本的区别.html">
+            
+                    
+                    HTTP各版本的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../../网络/HTTP/HTTP如何保存用户的状态.html">
+            
+                <a href="../../网络/HTTP/HTTP如何保存用户的状态.html">
+            
+                    
+                    HTTP如何保存用户的状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../../网络/HTTP/输入一个网站到显示页面的过程.html">
+            
+                <a href="../../网络/HTTP/输入一个网站到显示页面的过程.html">
+            
+                    
+                    输入一个网站到显示页面的过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../../网络/HTTP/HTTP和HTTPS的区别.html">
+            
+                <a href="../../网络/HTTP/HTTP和HTTPS的区别.html">
+            
+                    
+                    HTTP和HTTPS的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../网络/socket编程.html">
+            
+                <a href="../../网络/socket编程.html">
+            
+                    
+                    socket编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../../网络/socket编程/socket基本API.html">
+            
+                <a href="../../网络/socket编程/socket基本API.html">
+            
+                    
+                    socket基本API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../../网络/socket编程/阻塞，非阻塞，同步，异步.html">
+            
+                <a href="../../网络/socket编程/阻塞，非阻塞，同步，异步.html">
+            
+                    
+                    阻塞，非阻塞，同步，异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../../网络/socket编程/select,poll,epoll.html">
+            
+                <a href="../../网络/socket编程/select,poll,epoll.html">
+            
+                    
+                    select,poll,epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../数据库.html">
+            
+                <a href="../../数据库.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../理论知识.html">
+            
+                <a href="../../理论知识.html">
+            
+                    
+                    理论知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../数据库/理论知识/关系型与非关系型数据库.html">
+            
+                <a href="../../数据库/理论知识/关系型与非关系型数据库.html">
+            
+                    
+                    关系型与非关系型数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../数据库/理论知识/事务.html">
+            
+                <a href="../../数据库/理论知识/事务.html">
+            
+                    
+                    事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../../数据库/理论知识/数据结构优化手段.html">
+            
+                <a href="../../数据库/理论知识/数据结构优化手段.html">
+            
+                    
+                    数据结构优化手段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../../数据库/理论知识/分库分表.html">
+            
+                <a href="../../数据库/理论知识/分库分表.html">
+            
+                    
+                    分库分表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../../数据库/理论知识/悲观锁与乐观锁.html">
+            
+                <a href="../../数据库/理论知识/悲观锁与乐观锁.html">
+            
+                    
+                    乐观锁与悲观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../数据库/mysql.html">
+            
+                <a href="../../数据库/mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../数据库/mysql/索引.html">
+            
+                <a href="../../数据库/mysql/索引.html">
+            
+                    
+                    索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../数据库/mysql/为什么使用B+树.html">
+            
+                <a href="../../数据库/mysql/为什么使用B+树.html">
+            
+                    
+                    为什么使用B+树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../数据库/mysql/主从复制.html">
+            
+                <a href="../../数据库/mysql/主从复制.html">
+            
+                    
+                    主从复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../数据库/redis.html">
+            
+                <a href="../../数据库/redis.html">
+            
+                    
+                    redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../数据库/redis/redis底层数据结构.html">
+            
+                <a href="../../数据库/redis/redis底层数据结构.html">
+            
+                    
+                    redis底层数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../数据库/redis/单线程.html">
+            
+                <a href="../../数据库/redis/单线程.html">
+            
+                    
+                    单线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../数据库/redis/过期时间方案.html">
+            
+                <a href="../../数据库/redis/过期时间方案.html">
+            
+                    
+                    过期时间方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../../数据库/redis/缓存问题.html">
+            
+                <a href="../../数据库/redis/缓存问题.html">
+            
+                    
+                    缓存问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../../数据库/redis/持久化机制.html">
+            
+                <a href="../../数据库/redis/持久化机制.html">
+            
+                    
+                    持久化机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../../数据库/redis/集群.html">
+            
+                <a href="../../数据库/redis/集群.html">
+            
+                    
+                    集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../../数据库/redis/保证双写时数据一致.html">
+            
+                <a href="../../数据库/redis/保证双写时数据一致.html">
+            
+                    
+                    保证双写时数据一致
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.8" data-path="../../数据库/redis/定时机制.html">
+            
+                <a href="../../数据库/redis/定时机制.html">
+            
+                    
+                    定时机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../设计模式.html">
+            
+                <a href="../../设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../设计模式/单例模式.html">
+            
+                <a href="../../设计模式/单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../设计模式/观察者模式.html">
+            
+                <a href="../../设计模式/观察者模式.html">
+            
+                    
+                    观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../设计模式/工厂模式.html">
+            
+                <a href="../../设计模式/工厂模式.html">
+            
+                    
+                    工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../Linux.html">
+            
+                <a href="../../Linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../Linux/Linux常用命令.html">
+            
+                <a href="../../Linux/Linux常用命令.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../Linux/GDB断点调试.html">
+            
+                <a href="../../Linux/GDB断点调试.html">
+            
+                    
+                    GDB断点调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../Linux/CMake.html">
+            
+                <a href="../../Linux/CMake.html">
+            
+                    
+                    CMake
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../Linux/Timer.html">
+            
+                <a href="../../Linux/Timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../数据结构和算法.html">
+            
+                <a href="../../数据结构和算法.html">
+            
+                    
+                    数据结构和算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../数据结构和算法/时间复杂度与空间复杂度.html">
+            
+                <a href="../../数据结构和算法/时间复杂度与空间复杂度.html">
+            
+                    
+                    时间复杂度与空间复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../数据结构和算法/数据结构总结.html">
+            
+                <a href="../../数据结构和算法/数据结构总结.html">
+            
+                    
+                    数据结构总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../数据结构和算法/红黑树和平衡二叉树.html">
+            
+                <a href="../../数据结构和算法/红黑树和平衡二叉树.html">
+            
+                    
+                    红黑树和平衡二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../数据结构和算法/排序.html">
+            
+                <a href="../../数据结构和算法/排序.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../数据结构和算法/刷题技巧及常见题型.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型.html">
+            
+                    
+                    刷题技巧及常见题型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.5.1" data-path="../../数据结构和算法/刷题技巧及常见题型/二分法.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/二分法.html">
+            
+                    
+                    二分法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.2" data-path="../../数据结构和算法/刷题技巧及常见题型/双指针.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/双指针.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.3" data-path="../../数据结构和算法/刷题技巧及常见题型/链表.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.4" data-path="../../数据结构和算法/刷题技巧及常见题型/树.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.5" data-path="../../数据结构和算法/刷题技巧及常见题型/栈.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/栈.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.6" data-path="../../数据结构和算法/刷题技巧及常见题型/动态规划.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/动态规划.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.7" data-path="../../数据结构和算法/刷题技巧及常见题型/bfs&dfs.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/bfs&dfs.html">
+            
+                    
+                    bfs&dfs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.8" data-path="../../数据结构和算法/刷题技巧及常见题型/回溯.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/回溯.html">
+            
+                    
+                    回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.9" data-path="../../数据结构和算法/刷题技巧及常见题型/贪心.html">
+            
+                <a href="../../数据结构和算法/刷题技巧及常见题型/贪心.html">
+            
+                    
+                    贪心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../游戏服务器.html">
+            
+                <a href="../../游戏服务器.html">
+            
+                    
+                    游戏服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../游戏服务器/业务.html">
+            
+                <a href="../../游戏服务器/业务.html">
+            
+                    
+                    业务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../../游戏服务器/业务/邮件.html">
+            
+                <a href="../../游戏服务器/业务/邮件.html">
+            
+                    
+                    邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../../游戏服务器/业务/聊天.html">
+            
+                <a href="../../游戏服务器/业务/聊天.html">
+            
+                    
+                    聊天
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.3" data-path="../../游戏服务器/业务/充值.html">
+            
+                <a href="../../游戏服务器/业务/充值.html">
+            
+                    
+                    充值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.4" data-path="../../游戏服务器/业务/雪花算法.html">
+            
+                <a href="../../游戏服务器/业务/雪花算法.html">
+            
+                    
+                    雪花算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../游戏服务器/技术.html">
+            
+                <a href="../../游戏服务器/技术.html">
+            
+                    
+                    技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../../游戏服务器/技术/帧同步和状态同步.html">
+            
+                <a href="../../游戏服务器/技术/帧同步和状态同步.html">
+            
+                    
+                    帧同步和状态同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../../游戏服务器/技术/排行榜.html">
+            
+                <a href="../../游戏服务器/技术/排行榜.html">
+            
+                    
+                    排行榜
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../../游戏服务器/技术/敏感词过滤.html">
+            
+                <a href="../../游戏服务器/技术/敏感词过滤.html">
+            
+                    
+                    敏感词过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.4" data-path="../../游戏服务器/技术/洗牌算法.html">
+            
+                <a href="../../游戏服务器/技术/洗牌算法.html">
+            
+                    
+                    洗牌算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.5" data-path="../../游戏服务器/技术/AOI.html">
+            
+                <a href="../../游戏服务器/技术/AOI.html">
+            
+                    
+                    AOI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.6" data-path="../../游戏服务器/技术/自动寻路.html">
+            
+                <a href="../../游戏服务器/技术/自动寻路.html">
+            
+                    
+                    自动寻路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.7" data-path="../../游戏服务器/技术/分布式架构.html">
+            
+                <a href="../../游戏服务器/技术/分布式架构.html">
+            
+                    
+                    分布式架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.8" data-path="../../游戏服务器/技术/交互通信协议的设计.html">
+            
+                <a href="../../游戏服务器/技术/交互通信协议的设计.html">
+            
+                    
+                    交互通信协议的设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.9" data-path="../../游戏服务器/技术/场景管理.html">
+            
+                <a href="../../游戏服务器/技术/场景管理.html">
+            
+                    
+                    场景管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.10" data-path="../../游戏服务器/技术/负载均衡.html">
+            
+                <a href="../../游戏服务器/技术/负载均衡.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.11" data-path="../../游戏服务器/技术/问题的定位分析.html">
+            
+                <a href="../../游戏服务器/技术/问题的定位分析.html">
+            
+                    
+                    问题的定位分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.12" data-path="../../游戏服务器/技术/定时器.html">
+            
+                <a href="../../游戏服务器/技术/定时器.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.13" data-path="../../游戏服务器/技术/消息队列.html">
+            
+                <a href="../../游戏服务器/技术/消息队列.html">
+            
+                    
+                    消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.14" data-path="../../游戏服务器/技术/微服务与RPC.html">
+            
+                <a href="../../游戏服务器/技术/微服务与RPC.html">
+            
+                    
+                    微服务与RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.15" data-path="../../游戏服务器/技术/服务器性能瓶颈.html">
+            
+                <a href="../../游戏服务器/技术/服务器性能瓶颈.html">
+            
+                    
+                    服务器性能瓶颈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.16" data-path="../../游戏服务器/技术/服务器高可用.html">
+            
+                <a href="../../游戏服务器/技术/服务器高可用.html">
+            
+                    
+                    服务器高可用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.17" data-path="../../游戏服务器/技术/全区全服下的分布式解决方案.html">
+            
+                <a href="../../游戏服务器/技术/全区全服下的分布式解决方案.html">
+            
+                    
+                    全区全服下的分布式解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.18" data-path="../../游戏服务器/技术/服务器通信.html">
+            
+                <a href="../../游戏服务器/技术/服务器通信.html">
+            
+                    
+                    服务器通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../python.html">
+            
+                <a href="../../python.html">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Linux内存</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x8D70;&#x8FDB;linux&#x5185;&#x5B58;">&#x8D70;&#x8FDB;Linux&#x5185;&#x5B58;</h3>
+<ul>
+<li><p><strong>&#x5185;&#x5B58;&#x662F;&#x4EC0;&#x4E48;</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtURUF7Yd5jgE8blh6micS1wZjFIHQtI55aSktycUUCMNTsh3u2dUvMYA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li>&#x5185;&#x5B58;&#x53C8;&#x79F0;&#x4E3B;&#x5B58;&#xFF0C;&#x662F;CPU&#x80FD;&#x76F4;&#x63A5;&#x5BFB;&#x5740;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x7531;&#x534A;&#x5BFC;&#x4F53;&#x5668;&#x4EF6;&#x5236;&#x6210;</li>
+<li>&#x5185;&#x5B58;&#x7684;&#x7279;&#x70B9;&#x662F;&#x5B58;&#x53D6;&#x901F;&#x7387;&#x5FEB;&#xFF0C;&#x65AD;&#x7535;&#x4E00;&#x822C;&#x4E0D;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x975E;&#x6301;&#x4E45;&#x5316;&#x8BBE;&#x5907;  </li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x5185;&#x5B58;&#x7684;&#x4F5C;&#x7528;">&#x5185;&#x5B58;&#x7684;&#x4F5C;&#x7528;</h3>
+<ul>
+<li>&#x6682;&#x65F6;&#x5B58;&#x653E;cpu&#x7684;&#x8FD0;&#x7B97;&#x6570;&#x636E;</li>
+<li>&#x786C;&#x76D8;&#x7B49;&#x5916;&#x90E8;&#x5B58;&#x50A8;&#x5668;&#x4EA4;&#x6362;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x4FDD;&#x969C;CPU&#x8BA1;&#x7B97;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#x548C;&#x9AD8;&#x6027;&#x80FD;</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtTlJ1g9bkRUEF7IoB0AyzfszniaDADqEULxb577gibNfkSm9KDVFicF8Hg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"> </p>
+<h3 id="linux&#x5185;&#x5B58;&#x5730;&#x5740;&#x7A7A;&#x95F4;">Linux&#x5185;&#x5B58;&#x5730;&#x5740;&#x7A7A;&#x95F4;</h3>
+<ul>
+<li><p><strong>Linux&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5168;&#x8C8C;</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtiahuHH6ibkCADJtN8jhE9MfNib89e4TH07OTPPk0loUOBe6tAddueyWYA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p><strong>&#x5185;&#x5B58;&#x5730;&#x5740;--&#x7528;&#x6237;&#x6001;&amp;&#x5185;&#x6838;&#x6001;</strong></p>
+<ul>
+<li><p>&#x7528;&#x6237;&#x6001;&#xFF1A;Ring3&#x8FD0;&#x884C;&#x4E8E;&#x7528;&#x6237;&#x6001;&#x7684;&#x4EE3;&#x7801;&#x5219;&#x8981;&#x53D7;&#x5230;&#x5904;&#x7406;&#x5668;&#x7684;&#x8BF8;&#x591A;</p>
+</li>
+<li><p>&#x5185;&#x6838;&#x6001;&#xFF1A;Ring0&#x5728;&#x5904;&#x7406;&#x5668;&#x7684;&#x5B58;&#x50A8;&#x4FDD;&#x62A4;&#x4E2D;&#xFF0C;&#x6838;&#x5FC3;&#x6001;</p>
+</li>
+<li><p>&#x7528;&#x6237;&#x6001;&#x5207;&#x6362;&#x5230;&#x5185;&#x6838;&#x6001;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x5F02;&#x5E38;&#xFF0C;&#x5916;&#x8BBE;&#x4E2D;&#x65AD;</p>
+</li>
+<li><p>&#x533A;&#x522B;&#xFF1A;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x90FD;&#x6709;&#x5B8C;&#x5168;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#xFF0C;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x4E0D;&#x88AB;&#x5E72;&#x6270;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF1A;&#x7528;&#x6237;&#x6001;&#x7684;&#x7A0B;&#x5E8F;&#x5C31;&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x64CD;&#x4F5C;&#x5185;&#x6838;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x5B89;&#x5168;&#x4FDD;&#x62A4;&#x4F5C;&#x7528;&#xFF0C;&#x5185;&#x6838;&#x6001;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x5185;&#x6838;&#x5730;&#x5740;&#x7A7A;&#x95F4;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtt3nWPicDP8tiabsQLz4y02kgFb0VC4trO8paECD0VJWds9hTgWE4CxoQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x5185;&#x5B58;&#x5730;&#x5740;--MMU&#x5730;&#x5740;&#x8F6C;&#x6362;</strong></p>
+<ul>
+<li>MMU&#x662F;&#x4E00;&#x79CD;&#x786C;&#x4EF6;&#x7535;&#x8DEF;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5206;&#x6BB5;&#x90E8;&#x4EF6;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5206;&#x9875;&#x90E8;&#x4EF6;</li>
+<li>&#x5206;&#x6BB5;&#x673A;&#x5236;&#x628A;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x7EBF;&#x6027;&#x5730;&#x5740;</li>
+<li>&#x5206;&#x9875;&#x673A;&#x5236;&#x628A;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x7269;&#x7406;&#x5730;&#x5740;</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtQ7QGWoOwtguNCwh3mlB1fEOibOPZGq1EzjckfgiaJVcEDnlW2DXhLAibw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p><strong>&#x5185;&#x5B58;&#x5730;&#x5740;--&#x5206;&#x6BB5;&#x673A;&#x5236;</strong></p>
+<ul>
+<li><strong>&#x6BB5;&#x9009;&#x62E9;&#x7B26;</strong><ul>
+<li>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5FEB;&#x901F;&#x68C0;&#x7D22;&#x6BB5;&#x9009;&#x62E9;&#x7B26;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x5206;&#x6BB5;&#x5BC4;&#x5B58;&#x5668;&#x6765;&#x7F13;&#x5B58;&#x6BB5;&#x9009;&#x62E9;&#x7B26;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#xFF1A;cs,ss,ds,es,fs&#x548C;gs</li>
+<li>&#x6BB5;&#x7684;&#x57FA;&#x5730;&#x5740;(Base Address)&#xFF1A;&#x5728;&#x7EBF;&#x6027;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x6BB5;&#x8D77;&#x59CB;&#x5730;&#x5740;</li>
+<li>&#x6BB5;&#x7684;&#x754C;&#x9650;(Limit)&#xFF1A;&#x5728;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E2D;&#xFF0C;&#x6BB5;&#x5185;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x6700;&#x5927;&#x504F;&#x79FB;&#x91CF;</li>
+</ul>
+</li>
+<li><strong>&#x5206;&#x6BB5;&#x5B9E;&#x73B0;</strong><ul>
+<li>&#x903B;&#x8F91;&#x5730;&#x5740;&#x7684;&#x6BB5;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x63D0;&#x4F9B;&#x6BB5;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x6BB5;&#x63CF;&#x8FF0;&#x7B26;&#x4E2D;&#x5F97;&#x5230;&#x6BB5;&#x57FA;&#x5740;&#x548C;&#x6BB5;&#x754C;&#x9650;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x4E0A;&#x903B;&#x8F91;&#x5730;&#x5740;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x7EBF;&#x6027;&#x5730;&#x5740;</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtIy9rI6Cqs75p8dtSibbgh4xr5PeDmQaOSt4wmEY4hcBZjNb5uCXm71w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p><strong>&#x5185;&#x5B58;&#x5730;&#x5740;--&#x5206;&#x9875;&#x673A;&#x5236;&#xFF08;32&#x4F4D;&#xFF09;</strong></p>
+<ul>
+<li>&#x5206;&#x9875;&#x673A;&#x5236;&#x662F;&#x5728;&#x5206;&#x6BB5;&#x673A;&#x5236;&#x4E4B;&#x540E;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x5B83;&#x8FDB;&#x4E00;&#x6B65;&#x5C06;&#x7EBF;&#x6027;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x7269;&#x7406;&#x5730;&#x5740;</li>
+<li>10&#x4F4D;&#x9875;&#x76EE;&#x5F55;&#xFF0C;10&#x4F4D;&#x9875;&#x8868;&#x9879;&#xFF0C;12&#x4F4D;&#x9875;&#x504F;&#x79FB;&#x5730;&#x5740;</li>
+<li>&#x5355;&#x9875;&#x7684;&#x5927;&#x5C0F;&#x4E3A;4KB</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqt0ia70Oo0mDibcjZQn6RHJyNl0kEuoHmZWksZ3BkBicp9GZ7pic1eMpnrVA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p><strong>&#x7528;&#x6237;&#x6001;&#x5730;&#x5740;&#x7A7A;&#x95F4;</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtLJN3AwJu7iao8dibgGaEeZpjiaaLew7CUFf1PrBoTHX9hvTpVAHT2zWvA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li><strong>text</strong>&#xFF1A;&#x4EE3;&#x7801;&#x6BB5;&#x53EF;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x503C;&#x3001;&#x53EA;&#x8BFB;&#x53D8;&#x91CF;</li>
+<li><strong>data</strong>&#xFF1A;&#x6570;&#x636E;&#x6BB5;&#xFF0C;&#x6620;&#x5C04;&#x7A0B;&#x5E8F;&#x4E2D;&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;</li>
+<li><strong>bss</strong>&#xFF1A;&#x5B58;&#x653E;&#x7A0B;&#x5E8F;&#x4E2D;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;</li>
+<li><strong>heap</strong>&#xFF1A;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5806;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4E2D;&#x4F7F;&#x7528;malloc&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;</li>
+<li><strong>mmap</strong>&#xFF1A;&#x5171;&#x4EAB;&#x5E93;&#x53CA;&#x533F;&#x540D;&#x6587;&#x4EF6;&#x7684;&#x6620;&#x5C04;&#x533A;&#x57DF;</li>
+<li><strong>stack</strong>&#xFF1A;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x6808;</li>
+</ul>
+</li>
+<li><p><strong>&#x5185;&#x6838;&#x6001;&#x5730;&#x5740;&#x7A7A;&#x95F4;</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtLYKjL6BV5GGrBPibhNl3BvNknjNePt9qqy4Bcsxzra6BRGpicchaFKZg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li><strong>&#x76F4;&#x63A5;&#x6620;&#x5C04;&#x533A;</strong>&#xFF1A;&#x7EBF;&#x6027;&#x7A7A;&#x95F4;&#x4E2D;&#x4ECE;3G&#x5F00;&#x59CB;&#x6700;&#x5927;896M&#x7684;&#x533A;&#x95F4;&#xFF0C;&#x4E3A;&#x76F4;&#x63A5;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x533A;</li>
+<li><strong>&#x52A8;&#x6001;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x533A;</strong>&#xFF1A;&#x8BE5;&#x533A;&#x57DF;&#x7531;&#x5185;&#x6838;&#x51FD;&#x6570;vmalloc&#x6765;&#x5206;&#x914D;</li>
+<li><strong>&#x6C38;&#x4E45;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x533A;</strong>&#xFF1A;&#x8BE5;&#x533A;&#x57DF;&#x53EF;&#x8BBF;&#x95EE;&#x9AD8;&#x7AEF;&#x5185;&#x5B58;</li>
+<li><strong>&#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x533A;</strong>&#xFF1A;&#x8BE5;&#x533A;&#x57DF;&#x548C;4G&#x7684;&#x9876;&#x7AEF;&#x53EA;&#x6709;4K&#x7684;&#x9694;&#x79BB;&#x5E26;&#xFF0C;&#x5176;&#x6BCF;&#x4E2A;&#x5730;&#x5740;&#x9879;&#x90FD;&#x670D;&#x52A1;&#x4E8E;&#x7279;&#x5B9A;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x5982;&#xFF1A;ACPI_BASE&#x7B49;</li>
+</ul>
+</li>
+<li><p><strong>&#x8FDB;&#x7A0B;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</strong></p>
+<ul>
+<li><p>&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x865A;&#x62DF;&#x5730;&#x5740;&#xFF0C;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x865A;&#x62DF;&#x5730;&#x5740;</p>
+</li>
+<li><p>&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x662F;&#x7531;&#x5185;&#x6838;&#x8D1F;&#x8D23;&#x6620;&#x5C04;&#xFF0C;&#x4E0D;&#x4F1A;&#x8DDF;&#x7740;&#x8FDB;&#x7A0B;&#x53D8;&#x5316;&#xFF1B;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x5730;&#x5740;&#x6709;&#x81EA;&#x5DF1;&#x5BF9;&#x5E94;&#x7684;&#x9875;&#x8868;&#xFF0C;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x5404;&#x81EA;&#x6709;&#x4E0D;&#x540C;&#x9875;&#x8868;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqt5NpodntPXf8iaP8ChAO1Iel16Pce4Pxeh5dUOPXypiaEo30iba84qbhMA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;">  </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="linux&#x5185;&#x5B58;&#x5206;&#x914D;&#x7B97;&#x6CD5;">Linux&#x5185;&#x5B58;&#x5206;&#x914D;&#x7B97;&#x6CD5;</h3>
+<p><strong>&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7B97;&#x6CD5;</strong>--&#x5BF9;&#x8BA8;&#x538C;&#x81EA;&#x5DF1;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#x7684;&#x4EBA;&#x6765;&#x8BF4;&#x662F;&#x5929;&#x8D50;&#x7684;&#x793C;&#x7269;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtzSGVRhTAnMfPYNc6uo6sqR0pDnCXFic1snRSZGclXtqGNJVnm1Siaesg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<h4 id="linux&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x6846;&#x67B6;">Linux&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x6846;&#x67B6;</h4>
+<ul>
+<li><p><strong>&#x5185;&#x5B58;&#x788E;&#x7247;</strong></p>
+<ul>
+<li><strong>&#x57FA;&#x672C;&#x539F;&#x7406;</strong><ul>
+<li>&#x4EA7;&#x751F;&#x539F;&#x56E0;&#xFF1A;&#x5185;&#x5B58;&#x5206;&#x914D;&#x8F83;&#x5C0F;&#xFF0C;&#x5E76;&#x4E14;&#x5206;&#x914D;&#x7684;&#x8FD9;&#x4E9B;&#x5C0F;&#x7684;&#x5185;&#x5B58;&#x751F;&#x5B58;&#x5468;&#x671F;&#x53C8;&#x8F83;&#x957F;&#xFF0C;&#x53CD;&#x590D;&#x7533;&#x8BF7;&#x540E;&#x5C06;&#x4EA7;&#x751F;&#x5185;&#x5B58;&#x788E;&#x7247;&#x7684;&#x51FA;&#x7EBF;</li>
+<li>&#x4F18;&#x70B9;&#xFF1A;&#x63D0;&#x9AD8;&#x5206;&#x914D;&#x901F;&#x5EA6;&#xFF0C;&#x4FBF;&#x4E8E;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#xFF0C;&#x9632;&#x6B62;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;</li>
+<li>&#x7F3A;&#x70B9;&#xFF1A;&#x5927;&#x91CF;&#x7684;&#x5185;&#x5B58;&#x788E;&#x7247;&#x4F1A;&#x4F7F;&#x7CFB;&#x7EDF;&#x7F13;&#x6162;&#xFF0C;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x7387;&#x4F4E;&#xFF0C;&#x6D6A;&#x8D39;&#x5927;</li>
+</ul>
+</li>
+<li><strong>&#x5982;&#x4F55;&#x907F;&#x514D;&#x5185;&#x5B58;&#x788E;&#x7247;</strong><ul>
+<li>&#x5C11;&#x7528;&#x52A8;&#x6001;&#x5185;&#x5B58;&#x5206;&#x914D;&#x51FD;&#x6570;&#xFF08;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x6808;&#x7A7A;&#x95F4;&#xFF09;</li>
+<li>&#x5206;&#x914D;&#x5185;&#x5B58;&#x548C;&#x91CA;&#x653E;&#x7684;&#x5185;&#x5B58;&#x5C3D;&#x91CF;&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;</li>
+<li>&#x5C3D;&#x91CF;&#x4E00;&#x6B21;&#x6027;&#x7533;&#x8BF7;&#x8F83;&#x5927;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x800C;&#x4E0D;&#x8981;&#x53CD;&#x590D;&#x7533;&#x8BF7;&#x5C0F;&#x5185;&#x5B58;</li>
+<li>&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x7533;&#x8BF7;&#x5927;&#x5757;&#x7684;2&#x7684;&#x6307;&#x6570;&#x5E42;&#x5927;&#x5C0F;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</li>
+<li>&#x5916;&#x90E8;&#x788E;&#x7247;&#x907F;&#x514D;--&#x4F19;&#x4F34;&#x7CFB;&#x7EDF;&#x7B97;&#x6CD5;</li>
+<li>&#x5185;&#x90E8;&#x788E;&#x7247;&#x907F;&#x514D;--slab&#x7B97;&#x6CD5;</li>
+<li>&#x81EA;&#x5DF1;&#x8FDB;&#x884C;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5DE5;&#x4F5C;&#xFF0C;&#x8BBE;&#x8BA1;&#x5185;&#x5B58;&#x6C60;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x4F19;&#x4F34;&#x7CFB;&#x7EDF;&#x7B97;&#x6CD5;--&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;</strong></p>
+<ul>
+<li><p><strong>&#x6982;&#x5FF5;</strong></p>
+<ul>
+<li>&#x4E3A;&#x5185;&#x6838;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x7528;&#x4E8E;&#x5206;&#x914D;&#x4E00;&#x7EC4;&#x8FDE;&#x7EED;&#x7684;&#x9875;&#x800C;&#x5EFA;&#x7ACB;&#x7684;&#x4E00;&#x79CD;&#x9AD8;&#x6548;&#x7684;&#x5206;&#x914D;&#x7B56;&#x7565;&#xFF0C;&#x5E76;&#x6709;&#x6548;&#x5730;&#x89E3;&#x51B3;&#x4E86;&#x5916;&#x788E;&#x7247;&#x7684;&#x95EE;&#x9898;</li>
+<li>&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x533A;&#x662F;&#x4EE5;&#x9875;&#x6846;&#x4E3A;&#x57FA;&#x672C;&#x5355;&#x4F4D;</li>
+</ul>
+</li>
+<li><p><strong>&#x5916;&#x90E8;&#x788E;&#x7247;</strong></p>
+<ul>
+<li><p>&#x5916;&#x90E8;&#x788E;&#x7247;&#x6307;&#x7684;&#x662F;&#x8FD8;&#x6CA1;&#x6709;&#x88AB;&#x5206;&#x914D;&#x51FA;&#x53BB;&#xFF08;&#x4E0D;&#x5C5E;&#x4E8E;&#x4EFB;&#x4F55;&#x8FDB;&#x7A0B;&#xFF09;&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x592A;&#x5C0F;&#x4E86;&#x65E0;&#x6CD5;&#x5206;&#x914D;&#x7ED9;&#x7533;&#x8BF7;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x7684;&#x65B0;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F2;&#x533A;&#x57DF;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;</p>
+</li>
+<li><p>&#x628A;&#x6240;&#x6709;&#x7A7A;&#x95F2;&#x9875;&#x5206;&#x7EC4;&#x4E3A;11&#x4E2A;&#x5757;&#x94FE;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A;&#x5757;&#x94FE;&#x8868;&#x5206;&#x522B;&#x5305;&#x542B;&#x5927;&#x5C0F;&#x4E3A;1,2,4,8,16,32,64,128,256,512&#x548C;1024&#x4E2A;&#x8FDE;&#x7EED;&#x9875;&#x6846;&#x7684;&#x9875;&#x5757;&#x3002;&#x6700;&#x5927;&#x53EF;&#x4EE5;&#x7533;&#x8BF7;1024&#x4E2A;&#x8FDE;&#x7EED;&#x9875;&#xFF0C;&#x5BF9;&#x5E94;4MB&#x5927;&#x5C0F;&#x7684;&#x8FDE;&#x7EED;&#x5185;&#x5B58;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqt4Al79xsYCfuibINCyBa8JFJYEAThic17cBfa0uD7N3oWCsibUpeQ9EW1g/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x4F19;&#x4F34;&#x7CFB;&#x7EDF;&#x7B97;&#x6CD5;--&#x7533;&#x8BF7;&#x548C;&#x56DE;&#x6536;</strong></p>
+<ul>
+<li><p><strong>&#x7533;&#x8BF7;&#x7B97;&#x6CD5;</strong></p>
+<ul>
+<li>&#x7533;&#x8BF7;2^i&#x4E2A;&#x9875;&#x5757;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x5982;&#x679C;2^i&#x5BF9;&#x5E94;&#x7684;&#x5757;&#x94FE;&#x8868;&#x6709;&#x7A7A;&#x95F2;&#x9875;&#x5757;&#xFF0C;&#x5219;&#x5206;&#x914D;&#x7ED9;&#x5E94;&#x7528;</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7A7A;&#x95F2;&#x9875;&#x5757;&#xFF0C;&#x5219;&#x67E5;&#x627E;2^i&#x5BF9;&#x5E94;&#x7684;&#x5757;&#x94FE;&#x8868;&#x662F;&#x5426;&#x6709;&#x7A7A;&#x95F2;&#x9875;&#x5757;&#xFF0C;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x5219;&#x5206;&#x914D;2^i&#x5757;&#x94FE;&#x8868;&#x8282;&#x70B9;&#x7ED9;&#x5E94;&#x7528;&#xFF0C;&#x53E6;&#x5916;2^i&#x5757;&#x94FE;&#x8868;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5230;2^i&#x5BF9;&#x5E94;&#x7684;&#x5757;&#x94FE;&#x8868;&#x4E2D;</li>
+<li>&#x5982;&#x679C;2^i&#x5757;&#x94FE;&#x8868;&#x4E2D;&#x6CA1;&#x6709;&#x7A7A;&#x95F2;&#x9875;&#x5757;&#xFF0C;&#x5219;&#x91CD;&#x590D;&#x6B65;&#x9AA4;2&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x6709;&#x7A7A;&#x95F2;&#x9875;&#x5757;&#x7684;&#x5757;&#x94FE;&#x8868;</li>
+<li>&#x5982;&#x679C;&#x4ECD;&#x7136;&#x6CA1;&#x6709;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5185;&#x5B58;&#x5206;&#x914D;&#x5931;&#x8D25;</li>
+</ul>
+</li>
+<li><p><strong>&#x56DE;&#x6536;&#x7B97;&#x6CD5;</strong></p>
+<ul>
+<li><p>&#x91CA;&#x653E;2^i&#x4E2A;&#x9875;&#x5757;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x67E5;&#x627E;2^i&#x4E2A;&#x9875;&#x5757;&#x5BF9;&#x5E94;&#x7684;&#x5757;&#x94FE;&#x8868;&#xFF0C;&#x662F;&#x5426;&#x6709;&#x4E0E;&#x5176;&#x7269;&#x7406;&#x5730;&#x5740;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#x9875;&#x5757;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x5219;&#x65E0;&#x9700;&#x5408;&#x5E76;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtp4IsOt63pzicdIomydCY5proxVSkjicJ1QUU4mQe2qyKSF81iaP4qc9xQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p>&#x5982;&#x679C;&#x6709;&#xFF0C;&#x5219;&#x5408;&#x5E76;&#x6210;2^i&#x7684;&#x9875;&#x5757;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;&#x7EE7;&#x7EED;&#x5BFB;&#x627E;&#x4E0B;&#x4E00;&#x7EA7;&#x5757;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x76F4;&#x5230;&#x4E0D;&#x80FD;&#x5408;&#x5E76;&#x4E3A;&#x6B62;</p>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x6761;&#x4EF6;</strong></p>
+<ul>
+<li>&#x4E24;&#x4E2A;&#x5FEB;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5927;&#x5C0F;</li>
+<li>&#x5B83;&#x4EEC;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#x662F;&#x8FDE;&#x7EED;&#x7684;</li>
+<li>&#x9875;&#x5757;&#x5927;&#x5C0F;&#x76F8;&#x540C;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x5982;&#x4F55;&#x5206;&#x914D;4M&#x4EE5;&#x4E0A;&#x7684;&#x5185;&#x5B58;</strong></p>
+<ul>
+<li><strong>&#x4E3A;&#x4F55;&#x9650;&#x5236;&#x5927;&#x5757;&#x5185;&#x5B58;&#x7684;&#x5206;&#x914D;</strong><ul>
+<li>&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x8D8A;&#x5927;&#xFF0C;&#x5931;&#x8D25;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x8D8A;&#x5927;</li>
+<li>&#x5927;&#x5757;&#x5185;&#x5B58;&#x9002;&#x7528;&#x573A;&#x666F;&#x5C11;</li>
+</ul>
+</li>
+<li><strong>&#x5185;&#x6838;&#x4E2D;&#x83B7;&#x53D6;4M&#x4EE5;&#x4E0A;&#x5927;&#x5185;&#x5B58;&#x7684;&#x65B9;&#x6CD5;</strong><ul>
+<li>&#x4FEE;&#x6539;MAX_ORDER&#xFF0C;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x5185;&#x6838;</li>
+<li>&#x5185;&#x6838;&#x542F;&#x52A8;&#x9009;&#x578B;&#x4F20;&#x9012;&#x201C;mem=&#x201D;&#x53C2;&#x6570;&#xFF0C;&#x5982;mem=80M&#xFF0C;&#x9884;&#x7559;&#x90E8;&#x5206;&#x5185;&#x5B58;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;</li>
+<li>request_mem_region &#x548C; ioremap_nocache &#x5C06;&#x9884;&#x7559;&#x7684;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x5230;&#x6A21;&#x5757;&#x4E2D;&#x3002;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x5185;&#x6838;&#x542F;&#x52A8;&#x53C2;&#x6570;, &#x65E0;&#x9700;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x5185;&#x6838;. &#x4F46;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x4E0D;&#x652F;&#x6301; x86 &#x67B6;&#x6784;, &#x53EA;&#x652F;&#x6301; ARM, PowerPC &#x7B49;&#x975E; x86 &#x67B6;&#x6784;</li>
+<li>&#x5728; start_kernel &#x4E2D; mem_init &#x51FD;&#x6570;&#x4E4B;&#x524D;&#x8C03;&#x7528; alloc_boot_mem &#x51FD;&#x6570;&#x9884;&#x5206;&#x914D;&#x5927;&#x5757;&#x5185;&#x5B58;, &#x9700;&#x8981;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x5185;&#x6838;</li>
+<li>vmalloc &#x51FD;&#x6570;&#xFF0C;&#x5185;&#x6838;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x5206;&#x914D;&#x5728;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x4E2D;&#x8FDE;&#x7EED;&#x4F46;&#x5728;&#x7269;&#x7406;&#x5185;&#x5B58;&#x4E2D;&#x4E0D;&#x4E00;&#x5B9A;&#x8FDE;&#x7EED;&#x7684;&#x5185;&#x5B58;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x4F19;&#x4F34;&#x7CFB;&#x7EDF;--&#x53CD;&#x788E;&#x7247;&#x673A;&#x5236;</strong></p>
+<ul>
+<li><strong>&#x4E0D;&#x53EF;&#x79FB;&#x52A8;&#x9875;</strong><ul>
+<li>&#x8FD9;&#x4E9B;&#x9875;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x4E3A;&#x6B62;&#xFF0C;&#x4E0D;&#x80FD;&#x591F;&#x79FB;&#x52A8;&#xFF0C;&#x4E5F;&#x4E0D;&#x53EF;&#x56DE;&#x6536;</li>
+<li>&#x5185;&#x6838;&#x4EE3;&#x7801;&#x6BB5;&#xFF0C;&#x6570;&#x636E;&#x6BB5;&#xFF0C;&#x5185;&#x6838;kmalloc()&#x51FA;&#x6765;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;</li>
+</ul>
+</li>
+<li><strong>&#x53EF;&#x56DE;&#x6536;&#x9875;</strong><ul>
+<li>&#x8FD9;&#x4E9B;&#x9875;&#x4E0D;&#x80FD;&#x79FB;&#x52A8;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#xFF0C;&#x5185;&#x6838;&#x5728;&#x56DE;&#x6536;&#x9875;&#x5360;&#x636E;&#x4E86;&#x592A;&#x591A;&#x7684;&#x5185;&#x5B58;&#x65F6;&#x6216;&#x8005;&#x5185;&#x5B58;&#x77ED;&#x7F3A;&#x65F6;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x56DE;&#x6536;</li>
+<li>&#x8FD9;&#x4E9B;&#x9875;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x79FB;&#x52A8;&#xFF0C;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x7684;&#x9875;&#x90FD;&#x5C5E;&#x4E8E;&#x8BE5;&#x7C7B;&#x522B;&#x3002;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x9875;&#x8868;&#x6620;&#x5C04;&#x7684;</li>
+<li>&#x5F53;&#x5B83;&#x4EEC;&#x79FB;&#x52A8;&#x5230;&#x65B0;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x9875;&#x8868;&#x9879;&#x4E5F;&#x4F1A;&#x76F8;&#x5E94;&#x7684;&#x66F4;&#x65B0;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>slab&#x7B97;&#x6CD5;--&#x57FA;&#x672C;&#x539F;&#x7406;</strong></p>
+<ul>
+<li><strong>&#x57FA;&#x672C;&#x6982;&#x5FF5;</strong><ul>
+<li>Linux &#x6240;&#x4F7F;&#x7528;&#x7684; slab &#x5206;&#x914D;&#x5668;&#x7684;&#x57FA;&#x7840;&#x662F; Jeff Bonwick &#x4E3A; SunOS &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x9996;&#x6B21;&#x5F15;&#x5165;&#x7684;&#x4E00;&#x79CD;&#x7B97;&#x6CD5;</li>
+<li>&#x5B83;&#x7684;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x662F;&#x5C06;&#x5185;&#x6838;&#x4E2D;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x653E;&#x5230;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x7531;&#x7CFB;&#x7EDF;&#x4FDD;&#x6301;&#x4E3A;&#x521D;&#x59CB;&#x7684;&#x53EF;&#x5229;&#x7528;&#x72B6;&#x6001;&#x3002;&#x6BD4;&#x5982;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x5185;&#x6838;&#x4E2D;&#x4F1A;&#x9891;&#x7E41;&#x5BF9;&#x6B64;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;</li>
+</ul>
+</li>
+<li><strong>&#x5185;&#x5B58;&#x788E;&#x7247;</strong><ul>
+<li>&#x5DF2;&#x7ECF;&#x88AB;&#x5206;&#x914D;&#x51FA;&#x53BB;&#x7684;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5927;&#x4E8E;&#x8BF7;&#x6C42;&#x6240;&#x9700;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</li>
+<li>&#x51CF;&#x5C11;&#x4F19;&#x4F34;&#x7B97;&#x6CD5;&#x5728;&#x5206;&#x914D;&#x5C0F;&#x5757;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x65F6;&#x6240;&#x4EA7;&#x751F;&#x7684;&#x5185;&#x90E8;&#x788E;&#x7247;</li>
+<li>&#x5C06;&#x9891;&#x7E41;&#x4F7F;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x51CF;&#x5C11;&#x5206;&#x914D;&#x3001;&#x521D;&#x59CB;&#x5316;&#x548C;&#x91CA;&#x653E;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x95F4;&#x5F00;&#x9500;</li>
+<li>&#x901A;&#x8FC7;&#x7740;&#x8272;&#x6280;&#x672F;&#x8C03;&#x6574;&#x5BF9;&#x8C61;&#x4EE5;&#x66F4;&#x597D;&#x7684;&#x4F7F;&#x7528;&#x786C;&#x4EF6;&#x9AD8;&#x901F;&#x7F13;&#x5B58;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>slab &#x5206;&#x914D;&#x5668;&#x7684;&#x7ED3;&#x6784;</strong></p>
+<ul>
+<li><p>&#x7531;&#x4E8E;&#x5BF9;&#x8C61;&#x662F;&#x4ECE; slab &#x4E2D;&#x5206;&#x914D;&#x548C;&#x91CA;&#x653E;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5355;&#x4E2A; slab &#x53EF;&#x4EE5;&#x5728; slab &#x5217;&#x8868;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x79FB;&#x52A8;</p>
+</li>
+<li><p>slabs_empty &#x5217;&#x8868;&#x4E2D;&#x7684; slab &#x662F;&#x8FDB;&#x884C;&#x56DE;&#x6536;&#xFF08;reaping&#xFF09;&#x7684;&#x4E3B;&#x8981;&#x5907;&#x9009;&#x5BF9;&#x8C61;</p>
+</li>
+<li><p>slab &#x8FD8;&#x652F;&#x6301;&#x901A;&#x7528;&#x5BF9;&#x8C61;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x4E86;&#x4E3A;&#x540C;&#x4E00;&#x76EE;&#x800C;&#x5BF9;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x91CD;&#x590D;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtcDppgxAnah7riaTgKoIN8q2WBl9Tt3MOo6W3mnMnia6LLuBicynUASiciaQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>slab&#x9AD8;&#x901F;&#x7F13;&#x5B58;</strong></p>
+<ul>
+<li><strong>&#x666E;&#x901A;&#x9AD8;&#x901F;&#x7F13;&#x5B58;</strong><ul>
+<li>slab &#x5206;&#x914D;&#x5668;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x5C0F;&#x5757;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x7684;&#x5206;&#x914D;&#x662F;&#x901A;&#x8FC7;&#x901A;&#x7528;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x5B9E;&#x73B0;&#x7684;</li>
+<li>&#x901A;&#x7528;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x5177;&#x6709;&#x51E0;&#x4F55;&#x5206;&#x5E03;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x8303;&#x56F4;&#x4E3A; 32 &#x5230; 131072 &#x5B57;&#x8282;&#x3002;</li>
+<li>&#x5185;&#x6838;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86; kmalloc() &#x548C; kfree() &#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#x5206;&#x522B;&#x8FDB;&#x884C;&#x5185;&#x5B58;&#x7684;&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;</li>
+</ul>
+</li>
+<li><strong>&#x4E13;&#x7528;&#x9AD8;&#x901F;&#x7F13;&#x5B58;</strong><ul>
+<li>&#x5185;&#x6838;&#x4E3A;&#x4E13;&#x7528;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x7684;&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x5B8C;&#x6574;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x6839;&#x636E;&#x6240;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x5177;&#x4F53;&#x7684;&#x5BF9;&#x8C61;&#x5206;&#x914D; slab &#x7F13;&#x5B58;</li>
+<li>kmem_cache_create() &#x7528;&#x4E8E;&#x5BF9;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x3002;&#x5B83;&#x4ECE; cache_cache &#x666E;&#x901A;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x4E2D;&#x4E3A;&#x65B0;&#x7684;&#x4E13;&#x6709;&#x7F13;&#x5B58;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x5E76;&#x628A;&#x8FD9;&#x4E2A;&#x63CF;&#x8FF0;&#x7B26;&#x63D2;&#x5165;&#x5230;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x63CF;&#x8FF0;&#x7B26;&#x5F62;&#x6210;&#x7684; cache_chain &#x94FE;&#x8868;&#x4E2D;</li>
+<li>kmem_cache_alloc() &#x5728;&#x5176;&#x53C2;&#x6570;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x4E2D;&#x5206;&#x914D;&#x4E00;&#x4E2A; slab&#x3002;&#x76F8;&#x53CD;&#xFF0C; kmem_cache_free() &#x5728;&#x5176;&#x53C2;&#x6570;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x4E2D;&#x91CA;&#x653E;&#x4E00;&#x4E2A; slab</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>&#x5185;&#x6838;&#x6001;&#x5185;&#x5B58;&#x6C60;</strong></p>
+<ul>
+<li><p><strong>&#x57FA;&#x672C;&#x539F;&#x7406;</strong></p>
+<ul>
+<li>&#x5148;&#x7533;&#x8BF7;&#x5206;&#x914D;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x3001;&#x5927;&#x5C0F;&#x76F8;&#x7B49;(&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;) &#x7684;&#x5185;&#x5B58;&#x5757;&#x7559;&#x4F5C;&#x5907;&#x7528;</li>
+<li>&#x5F53;&#x6709;&#x65B0;&#x7684;&#x5185;&#x5B58;&#x9700;&#x6C42;&#x65F6;&#xFF0C;&#x5C31;&#x4ECE;&#x5185;&#x5B58;&#x6C60;&#x4E2D;&#x5206;&#x51FA;&#x4E00;&#x90E8;&#x5206;&#x5185;&#x5B58;&#x5757;&#xFF0C;&#x82E5;&#x5185;&#x5B58;&#x5757;&#x4E0D;&#x591F;&#x518D;&#x7EE7;&#x7EED;&#x7533;&#x8BF7;&#x65B0;&#x7684;&#x5185;&#x5B58;</li>
+<li>&#x8FD9;&#x6837;&#x505A;&#x7684;&#x4E00;&#x4E2A;&#x663E;&#x8457;&#x4F18;&#x70B9;&#x662F;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4E86;&#x5185;&#x5B58;&#x788E;&#x7247;&#xFF0C;&#x4F7F;&#x5F97;&#x5185;&#x5B58;&#x5206;&#x914D;&#x6548;&#x7387;&#x5F97;&#x5230;&#x63D0;&#x5347;</li>
+</ul>
+</li>
+<li><p><strong>&#x5185;&#x6838;API</strong></p>
+<ul>
+<li><p>mempool_create &#x521B;&#x5EFA;&#x5185;&#x5B58;&#x6C60;&#x5BF9;&#x8C61;</p>
+</li>
+<li><p>mempool_alloc &#x5206;&#x914D;&#x51FD;&#x6570;&#x83B7;&#x5F97;&#x8BE5;&#x5BF9;&#x8C61;</p>
+</li>
+<li><p>mempool_free &#x91CA;&#x653E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</p>
+</li>
+<li><p>mempool_destroy &#x9500;&#x6BC1;&#x5185;&#x5B58;&#x6C60;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtJdGc9ckoAL6q7ibPSobPrNppiccIxQCUKrx0PBNibBbOJDSmzGwb8gfCw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x7528;&#x6237;&#x6001;&#x5185;&#x5B58;&#x6C60;</strong></p>
+<p>C++&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtZ2aRIdWibZCvEK7ibcKcI6MLbcQKAtnpxX0o4kodFBVib3WqlDfIiaLOvA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p><strong>DMA&#x5185;&#x5B58;</strong></p>
+<ul>
+<li>&#x4EC0;&#x4E48;&#x662F;DMA<ul>
+<li>&#x76F4;&#x63A5;&#x5185;&#x5B58;&#x8BBF;&#x95EE;&#x662F;&#x4E00;&#x79CD;&#x786C;&#x4EF6;&#x673A;&#x5236;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x5916;&#x56F4;&#x8BBE;&#x5907;&#x548C;&#x4E3B;&#x5185;&#x5B58;&#x4E4B;&#x95F4;&#x76F4;&#x63A5;&#x4F20;&#x8F93;&#x5B83;&#x4EEC;&#x7684; I/O &#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x7CFB;&#x7EDF;&#x5904;&#x7406;&#x5668;&#x7684;&#x53C2;&#x4E0E;2)  DMA &#x63A7;&#x5236;&#x5668;&#x7684;&#x529F;&#x80FD;</li>
+<li>&#x80FD;&#x5411; CPU &#x53D1;&#x51FA;&#x7CFB;&#x7EDF;&#x4FDD;&#x6301;&#xFF08;HOLD&#xFF09;&#x4FE1;&#x53F7;&#xFF0C;&#x63D0;&#x51FA;&#x603B;&#x7EBF;&#x63A5;&#x7BA1;&#x8BF7;&#x6C42;</li>
+<li>&#x5F53; CPU &#x53D1;&#x51FA;&#x5141;&#x8BB8;&#x63A5;&#x7BA1;&#x4FE1;&#x53F7;&#x540E;&#xFF0C;&#x8D1F;&#x8D23;&#x5BF9;&#x603B;&#x7EBF;&#x7684;&#x63A7;&#x5236;&#xFF0C;&#x8FDB;&#x5165; DMA &#x65B9;&#x5F0F;</li>
+<li>&#x80FD;&#x5BF9;&#x5B58;&#x50A8;&#x5668;&#x5BFB;&#x5740;&#x53CA;&#x80FD;&#x4FEE;&#x6539;&#x5730;&#x5740;&#x6307;&#x9488;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;&#x5185;&#x5B58;&#x7684;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;</li>
+<li>&#x80FD;&#x51B3;&#x5B9A;&#x672C;&#x6B21; DMA &#x4F20;&#x9001;&#x7684;&#x5B57;&#x8282;&#x6570;&#xFF0C;&#x5224;&#x65AD; DMA &#x4F20;&#x9001;&#x662F;&#x5426;&#x7ED3;&#x675F;</li>
+<li>&#x53D1;&#x51FA; DMA &#x7ED3;&#x675F;&#x4FE1;&#x53F7;&#xFF0C;&#x4F7F; CPU &#x6062;&#x590D;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x72B6;&#x6001;</li>
+</ul>
+</li>
+<li>DMA&#x4FE1;&#x53F7;<ul>
+<li>DREQ&#xFF1A;DMA &#x8BF7;&#x6C42;&#x4FE1;&#x53F7;&#x3002;&#x662F;&#x5916;&#x8BBE;&#x5411; DMA &#x63A7;&#x5236;&#x5668;&#x63D0;&#x51FA;&#x8981;&#x6C42;&#xFF0C;DMA &#x64CD;&#x4F5C;&#x7684;&#x7533;&#x8BF7;&#x4FE1;&#x53F7;</li>
+<li>DACK&#xFF1A;DMA &#x54CD;&#x5E94;&#x4FE1;&#x53F7;&#x3002;&#x662F; DMA &#x63A7;&#x5236;&#x5668;&#x5411;&#x63D0;&#x51FA; DMA &#x8BF7;&#x6C42;&#x7684;&#x5916;&#x8BBE;&#x8868;&#x793A;&#x5DF2;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x548C;&#x6B63;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x7684;&#x4FE1;&#x53F7;</li>
+<li>HRQ&#xFF1A;DMA &#x63A7;&#x5236;&#x5668;&#x5411; CPU &#x53D1;&#x51FA;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x8981;&#x6C42;&#x63A5;&#x7BA1;&#x603B;&#x7EBF;&#x7684;&#x8BF7;&#x6C42;&#x4FE1;&#x53F7;&#x3002;</li>
+<li>HLDA&#xFF1A;CPU &#x5411; DMA &#x63A7;&#x5236;&#x5668;&#x53D1;&#x51FA;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x5141;&#x8BB8;&#x63A5;&#x7BA1;&#x603B;&#x7EBF;&#x7684;&#x5E94;&#x7B54;&#x4FE1;&#x53F7;&#xFF1A;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqt4icZMYiasKz9FcBEjRWG1RKfbZMcDl91Vb6eiaoDruFibphAtuHFRj5QKQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;">  </p>
+<h3 id="&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x573A;&#x666F;">&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x573A;&#x666F;</h3>
+<p>out of memory&#x7684;&#x65F6;&#x4EE3;&#x8FC7;&#x53BB;&#x4E86;&#x5417;&#xFF1F;no&#xFF0C;&#x5185;&#x5B58;&#x518D;&#x5145;&#x8DB3;&#x4E5F;&#x4E0D;&#x53EF;&#x4EFB;&#x6027;&#x4F7F;&#x7528;</p>
+<ul>
+<li><p><strong>&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x573A;&#x666F;</strong></p>
+<ul>
+<li>page &#x7BA1;&#x7406;</li>
+<li>slab&#xFF08;kmalloc&#x3001;&#x5185;&#x5B58;&#x6C60;&#xFF09;</li>
+<li>&#x7528;&#x6237;&#x6001;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#xFF08;malloc&#x3001;relloc &#x6587;&#x4EF6;&#x6620;&#x5C04;&#x3001;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#xFF09;</li>
+<li>&#x7A0B;&#x5E8F;&#x7684;&#x5185;&#x5B58; map&#xFF08;&#x6808;&#x3001;&#x5806;&#x3001;code&#x3001;data&#xFF09;</li>
+<li>&#x5185;&#x6838;&#x548C;&#x7528;&#x6237;&#x6001;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;&#xFF08;copy_from_user&#x3001;copy_to_user&#xFF09;</li>
+<li>&#x5185;&#x5B58;&#x6620;&#x5C04;&#xFF08;&#x786C;&#x4EF6;&#x5BC4;&#x5B58;&#x5668;&#x3001;&#x4FDD;&#x7559;&#x5185;&#x5B58;&#xFF09;</li>
+<li>DMA &#x5185;&#x5B58;</li>
+</ul>
+</li>
+<li><p><strong>&#x7528;&#x6237;&#x6001;&#x5206;&#x914D;&#x51FD;&#x6570;</strong></p>
+<ul>
+<li><strong>alloca</strong> &#x662F;&#x5411;&#x6808;&#x7533;&#x8BF7;&#x5185;&#x5B58;,&#x56E0;&#x6B64;&#x65E0;&#x9700;&#x91CA;&#x653E;</li>
+<li><strong>malloc</strong> &#x6240;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x672A;&#x88AB;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4F7F;&#x7528; malloc() &#x51FD;&#x6570;&#x7684;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x65F6;(&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x8FD8;&#x6CA1;&#x6709;&#x88AB;&#x91CD;&#x65B0;&#x5206;&#x914D;) &#x80FD;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x4F46;&#x7ECF;&#x8FC7;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;(&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5DF2;&#x88AB;&#x91CD;&#x65B0;&#x5206;&#x914D;) &#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x95EE;&#x9898;</li>
+<li><strong>calloc</strong> &#x4F1A;&#x5C06;&#x6240;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4F4D;&#x90FD;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x96F6;</li>
+<li><p><strong>realloc</strong> &#x6269;&#x5C55;&#x73B0;&#x6709;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x5F53;&#x524D;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x5757;&#x8DB3;&#x591F; realloc &#x7684;&#x8BDD;&#xFF0C;&#x53EA;&#x662F;&#x5C06; p &#x6240;&#x6307;&#x5411;&#x7684;&#x7A7A;&#x95F4;&#x6269;&#x5927;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE; p &#x7684;&#x6307;&#x9488;&#x5730;&#x5740;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019; q &#x548C; p &#x6307;&#x5411;&#x7684;&#x5730;&#x5740;&#x662F;&#x4E00;&#x6837;&#x7684;</li>
+<li>&#x5982;&#x679C;&#x5F53;&#x524D;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x5757;&#x4E0D;&#x591F;&#x957F;&#x5EA6;&#xFF0C;&#x518D;&#x627E;&#x4E00;&#x4E2A;&#x8DB3;&#x591F;&#x957F;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5206;&#x914D;&#x4E00;&#x5757;&#x65B0;&#x7684;&#x5185;&#x5B58;&#xFF0C;q&#xFF0C;&#x5E76;&#x5C06; p &#x6307;&#x5411;&#x7684;&#x5185;&#x5BB9; copy &#x5230; q&#xFF0C;&#x8FD4;&#x56DE; q&#x3002;&#x5E76;&#x5C06; p &#x6240;&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5220;&#x9664;</li>
+</ul>
+</li>
+<li><p><strong>mmap</strong> &#x5C06;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x5176;&#x5B83;&#x5BF9;&#x8C61;&#x6620;&#x5C04;&#x8FDB;&#x5185;&#x5B58;&#xFF0C;&#x591A;&#x8FDB;&#x7A0B;&#x53EF;&#x8BBF;&#x95EE;</p>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x5185;&#x6838;&#x6001;&#x5185;&#x5B58;&#x5206;&#x914D;&#x51FD;&#x6570;</strong></p>
+<ul>
+<li><strong>get_free_pages</strong>&#x76F4;&#x63A5;&#x5BF9;&#x9875;&#x6846;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x5206;&#x914D;&#x8F83;&#x5927;&#x91CF;&#x7684;&#x8FDE;&#x7EED;&#x7269;&#x7406;&#x5185;&#x5B58;</li>
+<li><strong>kmem_cache_alloc</strong>&#x57FA;&#x4E8E; slab &#x673A;&#x5236;&#x5B9E;&#x73B0;&#xFF0C;&#x9002;&#x5408;&#x9700;&#x8981;&#x9891;&#x7E41;&#x7533;&#x8BF7;&#x91CA;&#x653E;&#x76F8;&#x540C;&#x5927;&#x5C0F;&#x5185;&#x5B58;&#x5757;&#xFF0C;kmalloc&#x57FA;&#x4E8E;kmem_cache_alloc&#x5B9E;&#x73B0;128KB&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5206;&#x914D;&#x65B9;&#x5F0F;&#xFF0C;&#x9700;&#x8981;&#x5C0F;&#x4E8E;&#x9875;&#x6846;&#x5927;&#x5C0F;&#x7684;&#x5185;&#x5B58;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</li>
+<li><strong>vmalloc</strong>&#x5EFA;&#x7ACB;&#x975E;&#x8FDE;&#x7EED;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5230;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7684;&#x6620;&#x5C04;&#x7269;&#x7406;&#x4E0D;&#x8FDE;&#x7EED;&#xFF0C;&#x9002;&#x5408;&#x9700;&#x8981;&#x5927;&#x5185;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x5730;&#x5740;&#x8FDE;&#x7EED;&#x6027;&#x6CA1;&#x6709;&#x8981;&#x6C42;&#x7684;&#x573A;&#x5408;</li>
+<li><strong>dma_alloc_coherent</strong>&#x57FA;&#x4E8E;_alloc_pages &#x5B9E;&#x73B0;4MB&#x9002;&#x7528;&#x4E8E; DMA &#x64CD;&#x4F5C;ioremap&#x5B9E;&#x73B0;&#x5DF2;&#x77E5;&#x7269;&#x7406;&#x5730;&#x5740;&#x5230;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x7269;&#x7406;&#x5730;&#x5740;&#x5DF2;&#x77E5;&#x7684;&#x573A;&#x5408;&#xFF0C;&#x5982;&#x8BBE;&#x5907;&#x9A71;&#x52A8;alloc_bootmem&#x5728;&#x542F;&#x52A8; kernel &#x65F6;&#xFF0C;&#x9884;&#x7559;&#x4E00;&#x6BB5;&#x5185;&#x5B58;&#xFF0C;&#x5185;&#x6838;&#x770B;&#x4E0D;&#x89C1;&#x5C0F;&#x4E8E;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x8981;&#x6C42;&#x8F83;&#x9AD8;</li>
+</ul>
+</li>
+<li><p><strong>malloc&#x7533;&#x8BF7;&#x5185;&#x5B58;</strong></p>
+<ul>
+<li>&#x8C03;&#x7528;malloc&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5B83;&#x6CBF; free_chuck_list &#x8FDE;&#x63A5;&#x8868;&#x5BFB;&#x627E;&#x4E00;&#x4E2A;&#x5927;&#x5230;&#x8DB3;&#x4EE5;&#x6EE1;&#x8DB3;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x6240;&#x9700;&#x8981;&#x7684;&#x5185;&#x5B58;&#x5757;</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtxr6Xs5JcE5FQ2dUbBnOu4D2sDNd91LmDKjgB64ibKTpuTY3ibgAialQCA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li>free_chuck_list &#x8FDE;&#x63A5;&#x8868;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x662F;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x7684;&#x5806;&#x7A7A;&#x95F4;&#x7F13;&#x51B2;&#x533A;&#x94FE;&#x8868;</li>
+<li>&#x5982;&#x679C;&#x7A7A;&#x95F4;&#x7F13;&#x51B2;&#x533A;&#x94FE;&#x8868;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x8C03;&#x7528; sys_brk &#x5EF6;&#x4F38;&#x8FDB;&#x7A0B;&#x7684;&#x6808;&#x7A7A;&#x95F4;</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqt0V2vnuRiaDQGaFy7IiaqrMbeubfsibW5weJS4S27dRfDSGtXrsThlkM2A/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li><p><strong>&#x7F3A;&#x9875;&#x5F02;&#x5E38;</strong></p>
+<ul>
+<li><p>&#x901A;&#x8FC7;<strong>get_free_pages</strong>&#x7533;&#x8BF7;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x7269;&#x7406;&#x9875;&#x9762;&#xFF0C;&#x6362;&#x7B97;addr&#x5728;&#x8FDB;&#x7A0B;pdg&#x6620;&#x5C04;&#x4E2D;&#x6240;&#x5728;&#x7684;pte&#x5730;&#x5740;&#xFF0C;&#x5C06;addr&#x5BF9;&#x5E94;&#x7684;pte&#x8BBE;&#x7F6E;&#x4E3A;&#x7269;&#x7406;&#x9875;&#x9762;&#x7684;&#x9996;&#x5730;&#x5740;</p>
+</li>
+<li><p>&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF1A;<strong>Brk</strong>--&#x7533;&#x8BF7;&#x5185;&#x5B58;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;128kb&#xFF0C;<strong>do_map</strong>--&#x7533;&#x8BF7;&#x5185;&#x5B58;&#x5927;&#x4E8E;128kb</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtOT1tdANt2iaTqT6PjE9PxQvt3aeTd2Aics5WQwkRDtwYicicZkpACjwsibg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+</ul>
+</li>
+<li><p>&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x8BBF;&#x95EE;&#x5185;&#x5B58;&#x5206;&#x6790;</p>
+<ul>
+<li>&#x7528;&#x6237;&#x6001;&#x8FDB;&#x7A0B;&#x72EC;&#x5360;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x4E24;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x865A;&#x62DF;&#x5730;&#x5740;&#x53EF;&#x76F8;&#x540C;</li>
+<li>&#x5728;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x6001;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6620;&#x5C04;&#x7269;&#x7406;&#x5730;&#x5740;&#xFF0C;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x53D1;&#x51FA;&#x7F3A;&#x9875;&#x5F02;&#x5E38;</li>
+<li>&#x7F3A;&#x9875;&#x5F02;&#x5E38;&#x9677;&#x5165;&#x5185;&#x6838;&#xFF0C;&#x5206;&#x914D;&#x7269;&#x7406;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x4E0E;&#x7528;&#x6237;&#x6001;&#x865A;&#x62DF;&#x5730;&#x5740;&#x5EFA;&#x7ACB;&#x6620;&#x5C04;</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtXs8VpVLh3kbYaaicgJsR95lou6skDHpzQj7ic448Ye1ApPzbVtHtZGug/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p><strong>&#x5171;&#x4EAB;&#x5185;&#x5B58;</strong></p>
+<ul>
+<li>&#x539F;&#x7406;<ul>
+<li>&#x5B83;&#x5141;&#x8BB8;&#x591A;&#x4E2A;&#x4E0D;&#x76F8;&#x5173;&#x7684;&#x8FDB;&#x7A0B;&#x53BB;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x90E8;&#x5206;&#x903B;&#x8F91;&#x5185;&#x5B58;</li>
+<li>&#x4E24;&#x4E2A;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x4F20;&#x8F93;&#x6570;&#x636E;&#xFF0C;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5C06;&#x662F;&#x4E00;&#x79CD;&#x6548;&#x7387;&#x6781;&#x9AD8;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</li>
+<li>&#x4E24;&#x4E2A;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#x5171;&#x4EAB;&#x6570;&#x636E;&#xFF0C;&#x662F;&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x9AD8;&#x6548;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x6709;&#x6548;&#x51CF;&#x5C11;&#x6570;&#x636E;&#x62F7;&#x8D1D;&#x7684;&#x6B21;&#x6570;</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtAu2GZdMKAsNhtBibhsfZCfOssIianSj0oiamxs1yhU4Xw4lcGpS7gIDVg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li>shm&#x63A5;&#x53E3;<ul>
+<li>shmget &#x521B;&#x5EFA;&#x5171;&#x4EAB;&#x5185;&#x5B58;</li>
+<li>shmat &#x542F;&#x52A8;&#x5BF9;&#x8BE5;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x5E76;&#x628A;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x8FDE;&#x63A5;&#x5230;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;</li>
+<li>shmdt &#x5C06;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4ECE;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x4E2D;&#x5206;&#x79BB;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x7684;&#x90A3;&#x4E9B;&#x5751;">&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x7684;&#x90A3;&#x4E9B;&#x5751;</h3>
+<ul>
+<li><p><strong>C&#x5185;&#x5B58;&#x6CC4;&#x6F0F;</strong></p>
+<ul>
+<li><p>&#x5728;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E2D;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x5730;&#x8C03;&#x7528; new &#x548C; delete &#x51FD;&#x6570;</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtwTS3R2Eq1HCC39aQ5UhqlKZSVDiaTdwOMcibLKMibPIIZxib2KZu4YW8dw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p>&#x6CA1;&#x6709;&#x6B63;&#x786E;&#x5730;&#x6E05;&#x9664;&#x5D4C;&#x5957;&#x7684;&#x5BF9;&#x8C61;&#x6307;&#x9488;</p>
+</li>
+<li><p>&#x6CA1;&#x6709;&#x5C06;&#x57FA;&#x7C7B;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E3A;&#x865A;&#x51FD;&#x6570;</p>
+</li>
+<li><p>&#x5F53;&#x57FA;&#x7C7B;&#x7684;&#x6307;&#x9488;&#x6307;&#x5411;&#x5B50;&#x7C7B;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x57FA;&#x7C7B;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x662F; virtual&#xFF0C;&#x90A3;&#x4E48;&#x5B50;&#x7C7B;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5B50;&#x7C7B;&#x7684;&#x8D44;&#x6E90;&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x6B63;&#x786E;&#x91CA;&#x653E;&#xFF0C;&#x56E0;&#x6B64;&#x9020;&#x6210;&#x5185;&#x5B58;&#x6CC4;&#x9732;</p>
+</li>
+<li><p>&#x7F3A;&#x5C11;&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x6309;&#x503C;&#x4F20;&#x9012;&#x4F1A;&#x8C03;&#x7528;&#xFF08;&#x62F7;&#x8D1D;&#xFF09;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x5F15;&#x7528;&#x4F20;&#x9012;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;</p>
+</li>
+<li><p>&#x6307;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x6307;&#x9488;&#x6570;&#x7EC4;&#x4E0D;&#x7B49;&#x540C;&#x4E8E;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x5B58;&#x653E;&#x7684;&#x662F;&#x6307;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x4E0D;&#x4EC5;&#x8981;&#x91CA;&#x653E;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD8;&#x8981;&#x91CA;&#x653E;&#x6BCF;&#x4E2A;&#x6307;&#x9488;&#x7684;&#x7A7A;&#x95F4;</p>
+</li>
+<li><p>&#x7F3A;&#x5C11;&#x91CD;&#x8F7D;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x4E5F;&#x662F;&#x9010;&#x4E2A;&#x6210;&#x5458;&#x62F7;&#x8D1D;&#x7684;&#x65B9;&#x5F0F;&#x590D;&#x5236;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x9020;&#x6210;&#x5185;&#x5B58;&#x6CC4;&#x9732;</p>
+</li>
+</ul>
+</li>
+<li><p><strong>C&#x91CE;&#x6307;&#x9488;</strong></p>
+<ul>
+<li>&#x6307;&#x9488;&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;</li>
+<li>&#x6307;&#x9488;&#x88AB; free &#x6216; delete &#x540E;&#xFF0C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x4E3A; NULL</li>
+<li>&#x6307;&#x9488;&#x64CD;&#x4F5C;&#x8D85;&#x8D8A;&#x4E86;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#xFF0C;&#x6BD4;&#x5982;&#x8FD4;&#x56DE;&#x6307;&#x5411;&#x6808;&#x5185;&#x5B58;&#x7684;&#x6307;&#x9488;&#x5C31;&#x662F;&#x91CE;&#x6307;&#x9488;</li>
+<li>&#x8BBF;&#x95EE;&#x7A7A;&#x6307;&#x9488;&#xFF08;&#x9700;&#x8981;&#x505A;&#x7A7A;&#x5224;&#x65AD;&#xFF09;</li>
+<li>sizeof &#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;</li>
+<li>&#x8BD5;&#x56FE;&#x4FEE;&#x6539;&#x5E38;&#x91CF;&#xFF0C;&#x5982;&#xFF1A;char p=&quot;1234&quot;;p=&apos;1&apos;</li>
+</ul>
+</li>
+<li><p><strong>C&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x51B2;&#x7A81;</strong></p>
+<ul>
+<li>&#x591A;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x7528; valotile &#x4FEE;&#x9970;</li>
+<li>&#x591A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x672A;&#x52A0;&#x9501;</li>
+<li>&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4EC5;&#x5BF9;&#x5355;&#x8FDB;&#x7A0B;&#x6709;&#x6548;</li>
+<li>&#x591A;&#x8FDB;&#x7A0B;&#x5199;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x672A;&#x505A;&#x540C;&#x6B65;&#x5904;&#x7406;</li>
+<li>mmap &#x5185;&#x5B58;&#x6620;&#x5C04;&#xFF0C;&#x591A;&#x8FDB;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;</li>
+</ul>
+</li>
+<li><p><strong>STL&#x8FED;&#x4EE3;&#x5668;&#x5931;&#x6548;</strong></p>
+<ul>
+<li><p>&#x88AB;&#x5220;&#x9664;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x5931;&#x6548;</p>
+</li>
+<li><p>&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#xFF08;insert/push_back &#x7B49;&#xFF09;&#x3001;&#x5220;&#x9664;&#x5143;&#x7D20;&#x5BFC;&#x81F4;&#x987A;&#x5E8F;&#x5BB9;&#x5668;&#x8FED;&#x4EE3;&#x5668;&#x5931;&#x6548;</p>
+<ul>
+<li>&#x9519;&#x8BEF;&#x793A;&#x4F8B;&#xFF1A;&#x5220;&#x9664;&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x8FED;&#x4EE3;&#x5668;&#x4F1A;&#x5931;&#x6548;</li>
+</ul>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;vector&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; vectInt;
+    <span class="hljs-keyword">int</span> i;
+
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; ++i) {
+        vectInt.push_back(i);
+    }
+
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;::iterator itVect = vectInt.begin();
+    <span class="hljs-keyword">for</span> (; itVect != vectInt.end(); ++itVect) {
+        <span class="hljs-keyword">if</span> (*itVect == <span class="hljs-number">4</span>) {
+            vectInt.erase(itVect);
+        }
+    }
+    <span class="hljs-keyword">int</span> iSize = vectInt.size();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; iSize; ++i) {
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;i=&quot;</span> &lt;&lt; i &lt;&lt; <span class="hljs-string">&quot;,&quot;</span> &lt;&lt; vectInt[i] &lt;&lt; <span class="hljs-built_in">endl</span>;
+    }
+}
+</code></pre>
+<ul>
+<li>&#x6B63;&#x786E;&#x793A;&#x4F8B;&#xFF1A;&#x8FED;&#x4EE3;&#x5668;erase&#x65F6;&#xFF0C;&#x9700;&#x4FDD;&#x5B58;&#x4E0B;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;</li>
+</ul>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;vector&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; vectInt;
+    <span class="hljs-keyword">int</span> i;
+
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; ++i) {
+        vectInt.push_back(i);
+        <span class="hljs-keyword">if</span> (<span class="hljs-number">3</span> == i) {
+            vectInt.push_back(i);
+        }
+    }
+
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;::iterator itVect = vectInt.begin();
+    <span class="hljs-keyword">for</span> (; itVect != vectInt.end(); ) {
+        <span class="hljs-keyword">if</span> (*itVect == <span class="hljs-number">3</span>) {
+            itVect = vectInt.erase(itVect);
+        }
+        <span class="hljs-keyword">else</span> {
+            ++itVect;
+        }
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; vectInt.size(); ++i) {
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;i=&quot;</span> &lt;&lt; i &lt;&lt; <span class="hljs-string">&quot;,&quot;</span> &lt;&lt; vectInt[i] &lt;&lt; <span class="hljs-built_in">endl</span>;
+    }
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x667A;&#x80FD;&#x6307;&#x9488;</strong></p>
+<ul>
+<li><p>auto_ptr&#x66FF;&#x6362;&#x4E3A;unique_ptr</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtHsIrSXbLBZWTLnKOpYEwwaQHeicLJylf6h2PMJgHH0ibuhzwBoyiaHF3w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p>&#x4F7F;&#x7528;make_shared &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A; shared_ptr</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtssI6h4oWZ5MalsT1tgrPUAMQTyIHkprNlibhz38ObKe5qHIBaNcGJoA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+</li>
+<li><p>weak_ptr &#x667A;&#x80FD;&#x6307;&#x9488;&#x52A9;&#x624B;</p>
+</li>
+</ul>
+</li>
+<li><p><strong>C++11&#x66F4;&#x5C0F;&#x66F4;&#x5FEB;&#x66F4;&#x5B89;&#x5168;</strong></p>
+<ul>
+<li>std::atomic &#x539F;&#x5B50;&#x6570;&#x636E;&#x7C7B;&#x578B; &#x591A;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;</li>
+<li>std::array &#x5B9A;&#x957F;&#x6570;&#x7EC4;&#x5F00;&#x9500;&#x6BD4; array &#x5C0F;&#x548C; std::vector &#x4E0D;&#x540C;&#x7684;&#x662F; array &#x7684;&#x957F;&#x5EA6;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x52A8;&#x6001;&#x62D3;&#x5C55;</li>
+<li>std::vector vector &#x7626;&#x8EAB; shrink_to_fit()&#xFF1A;&#x5C06; capacity &#x51CF;&#x5C11;&#x4E3A;&#x4E8E; size() &#x76F8;&#x540C;&#x7684;&#x5927;&#x5C0F;</li>
+<li>std::forward_list&#x662F;&#x5355;&#x94FE;&#x8868;&#xFF08;std::list &#x662F;&#x53CC;&#x94FE;&#x8868;&#xFF09;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x987A;&#x5E8F;&#x904D;&#x5386;&#x7684;&#x573A;&#x5408;&#xFF0C;forward_list &#x80FD;&#x66F4;&#x52A0;&#x8282;&#x7701;&#x5185;&#x5B58;&#xFF0C;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x7684;&#x6027;&#x80FD;&#x9AD8;&#x4E8E; list&#x3002;</li>
+<li>std::unordered_map&#x3001;std::unordered_set&#x7528; hash &#x5B9E;&#x73B0;&#x7684;&#x65E0;&#x5E8F;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x548C;&#x67E5;&#x627E;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x90FD;&#x662F; O(1)&#xFF0C;&#x5728;&#x4E0D;&#x5173;&#x6CE8;&#x5BB9;&#x5668;&#x5185;&#x5143;&#x7D20;&#x987A;&#x5E8F;&#x7684;&#x573A;&#x5408;&#xFF0C;&#x4F7F;&#x7528; unordered &#x7684;&#x5BB9;&#x5668;&#x80FD;&#x83B7;&#x5F97;&#x66F4;&#x9AD8;&#x7684;&#x6027;&#x80FD;  </li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x5982;&#x4F55;&#x67E5;&#x770B;&#x5185;&#x5B58;">&#x5982;&#x4F55;&#x67E5;&#x770B;&#x5185;&#x5B58;</h3>
+<ul>
+<li>&#x7CFB;&#x7EDF;&#x4E2D;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF1A;/proc/meminfo</li>
+</ul>
+<pre><code>
+$cat /proc/meminfoMemTotal:       
+8052444 kB #&#x6240;&#x6709;&#x5185;&#x5B58;(RAM)&#x5927;&#x5C0F;,&#x51CF;&#x53BB;&#x4E00;&#x4E9B;&#x9884;&#x7559;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7684;&#x5927;&#x5C0F;&#x3002;
+MemFree:         2754588 kB #&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#xFF0C;lowFree+highFree
+MemAvailable:    3934252 kB #&#x5728;&#x4E0D;&#x4F7F;&#x7528;&#x4EA4;&#x6362;&#x7A7A;&#x95F4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5E94;&#x7528;&#x6700;&#x5927;&#x53EF;&#x7528;&#x5185;&#x5B58;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#xFF1A;MemFree+Active(file)+Inactive(file)-(watermark+min(watermark,Active(file)+Inactive(file)/2))
+Buffers:          137128 kB #&#x5757;&#x8BBE;&#x5907;&#x6240;&#x5360;&#x7528;&#x7684;&#x7F13;&#x5B58;&#x9875;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;&#x76F4;&#x63A5;&#x8BFB;&#x5199;&#x5757;&#x8BBE;&#x5907;&#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5143;&#x6570;&#x636E;(metadata)&#xFF0C;&#x6BD4;&#x5982;superblock&#x4F7F;&#x7528;&#x7684;&#x7F13;&#x5B58;&#x9875;&#x3002;
+Cached:          1948128 kB #&#x8868;&#x793A;&#x666E;&#x901A;&#x6587;&#x4EF6;&#x6570;&#x636E;&#x6240;&#x5360;&#x7528;&#x7684;&#x7F13;&#x5B58;&#x9875;&#x3002;
+SwapCached:            0 kB #swap cache&#x4E2D;&#x5305;&#x542B;&#x7684;&#x662F;&#x88AB;&#x786E;&#x5B9A;&#x8981;swapping&#x6362;&#x9875;&#xFF0C;&#x4F46;&#x662F;&#x5C1A;&#x672A;&#x5199;&#x5165;&#x7269;&#x7406;&#x4EA4;&#x6362;&#x533A;&#x7684;&#x533F;&#x540D;&#x5185;&#x5B58;&#x9875;&#x3002;&#x90A3;&#x4E9B;&#x533F;&#x540D;&#x5185;&#x5B58;&#x9875;&#xFF0C;&#x6BD4;&#x5982;&#x7528;&#x6237;&#x8FDB;&#x7A0B;malloc&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#x9875;&#x662F;&#x6CA1;&#x6709;&#x5173;&#x8054;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x751F;swapping&#x6362;&#x9875;&#xFF0C;&#x8FD9;&#x7C7B;&#x5185;&#x5B58;&#x4F1A;&#x88AB;&#x5199;&#x5165;&#x5230;&#x4EA4;&#x6362;&#x533A;&#x3002;
+Active:          3650920 kB #active&#x5305;&#x542B;active anon&#x548C;active file
+Inactive:        1343420 kB #inactive&#x5305;&#x542B;inactive anon&#x548C;inactive file
+Active(anon):    2913304 kB #anonymous pages&#xFF08;&#x533F;&#x540D;&#x9875;&#xFF09;&#xFF0C;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x9875;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF1A;&#x4E0E;&#x6587;&#x4EF6;&#x5173;&#x8054;&#x7684;&#x5185;&#x5B58;&#x9875;(&#x6BD4;&#x5982;&#x7A0B;&#x5E8F;&#x6587;&#x4EF6;,&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5B58;&#x9875;)&#x548C;&#x4E0E;&#x5185;&#x5B58;&#x65E0;&#x5173;&#x7684;&#x5185;&#x5B58;&#x9875;&#xFF08;&#x6BD4;&#x5982;&#x8FDB;&#x7A0B;&#x7684;&#x5806;&#x6808;&#xFF0C;&#x7528;malloc&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#xFF09;&#xFF0C;&#x524D;&#x8005;&#x79F0;&#x4E3A;file pages&#x6216;mapped pages,&#x540E;&#x8005;&#x79F0;&#x4E3A;&#x533F;&#x540D;&#x9875;&#x3002;
+Inactive(anon):   727808 kB #&#x89C1;&#x4E0A;
+Active(file):     737616 kB #&#x89C1;&#x4E0A;
+Inactive(file):   615612 kB #&#x89C1;&#x4E0A;
+SwapTotal:       8265724 kB #&#x53EF;&#x7528;&#x7684;swap&#x7A7A;&#x95F4;&#x7684;&#x603B;&#x7684;&#x5927;&#x5C0F;(swap&#x5206;&#x533A;&#x5728;&#x7269;&#x7406;&#x5185;&#x5B58;&#x4E0D;&#x591F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x628A;&#x786C;&#x76D8;&#x7A7A;&#x95F4;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x91CA;&#x653E;&#x51FA;&#x6765;&#xFF0C;&#x4EE5;&#x4F9B;&#x5F53;&#x524D;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;)
+SwapFree:        8265724 kB #&#x5F53;&#x524D;&#x5269;&#x4F59;&#x7684;swap&#x7684;&#x5927;&#x5C0F;
+Dirty:               104 kB #&#x9700;&#x8981;&#x5199;&#x5165;&#x78C1;&#x76D8;&#x7684;&#x5185;&#x5B58;&#x53BB;&#x7684;&#x5927;&#x5C0F;
+Writeback:             0 kB #&#x6B63;&#x5728;&#x88AB;&#x5199;&#x56DE;&#x7684;&#x5185;&#x5B58;&#x533A;&#x7684;&#x5927;&#x5C0F;
+AnonPages:       2909332 kB #&#x672A;&#x6620;&#x5C04;&#x9875;&#x7684;&#x5185;&#x5B58;&#x7684;&#x5927;&#x5C0F;
+Mapped:           815524 kB #&#x8BBE;&#x5907;&#x548C;&#x6587;&#x4EF6;&#x7B49;&#x6620;&#x5C04;&#x7684;&#x5927;&#x5C0F;
+Shmem:            732032 kB #&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5927;&#x5C0F;
+Slab:             153096 kB #&#x5185;&#x6838;&#x6570;&#x636E;&#x7ED3;&#x6784;slab&#x7684;&#x5927;&#x5C0F;
+SReclaimable:      99684 kB #&#x53EF;&#x56DE;&#x6536;&#x7684;slab&#x7684;&#x5927;&#x5C0F;
+SUnreclaim:        53412 kB #&#x4E0D;&#x53EF;&#x56DE;&#x6536;&#x7684;slab&#x7684;&#x5927;&#x5C0F;
+KernelStack:       14288 kB
+PageTables:        62192 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12291944 kB
+Committed_AS:   11398920 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1380352 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      201472 kB
+DirectMap2M:     5967872 kB
+DirectMap1G:     3145728 kB
+</code></pre><ul>
+<li>&#x67E5;&#x8BE2;&#x5185;&#x5B58;&#x603B;&#x4F7F;&#x7528;&#x7387;&#xFF1A;free</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtwuDicUiaMzrW8T7r7nQ01ibVhBl7MacJoqNWwgLzVLygo3DAe7ahXbOPw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li>&#x67E5;&#x8BE2;&#x8FDB;&#x7A0B;cpu&#x548C;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x5360;&#x6BD4;&#xFF1A;top</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtd0W7hGic0bILPJSVbvdTC0SciaRj8ibA4nwKOtQYlGbzbgy268HJzKOKg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li>&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7EDF;&#x8BA1;&#xFF1A;vmstat</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtwiaYLUM7JhyicBiay4tFxCNIrJxGt1OAjUELIiaOmCnicJYN3lZS5ibebZJA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li>&#x8FDB;&#x7A0B;&#x6D88;&#x8017;&#x5185;&#x5B58;&#x5360;&#x6BD4;&#x548C;&#x6392;&#x5E8F;&#xFF1A;ps aux -sort rss</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cYSwmJQric6mIWoxyvgYQicmN29ObHeNqtd2x24NFv21kCY9Z24QkQo9tTdhRRKiaqKSjYveDKJicBggoJdOXic262Q/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="&#x56FE;&#x7247;"></p>
+<ul>
+<li><p>&#x67E5;&#x770B;&#x4F19;&#x4F34;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</p>
+<p>&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x7684;buddy&#x72B6;&#x6001;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>cat /proc/buddyinfo</code> &#x547D;&#x4EE4;&#x67E5;&#x770B;</p>
+<pre><code>cat /proc/buddyinfo 
+Node 0, zone      DMA     23     15      4      5      2      3      3      2      3      1      0 
+Node 0, zone   Normal    149    100     52     33     23      5     32      8     12      2     59 
+Node 0, zone  HighMem     11     21     23     49     29     15      8     16     12      2    142
+</code></pre></li>
+<li><p>&#x67E5;&#x770B;slab&#x4FE1;&#x606F;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; cat /proc/slabinfo  &#x547D;&#x4EE4;&#x67E5;&#x770B;</p>
+<pre><code>cat /proc/slabinfo 
+slabinfo - version: 2.1
+# name            &lt;active_objs&gt; &lt;num_objs&gt; &lt;objsize&gt; &lt;objperslab&gt; &lt;pagesperslab&gt; : tunables &lt;limit&gt; &lt;batchcount&gt; &lt;sharedfactor&gt; : slabdata &lt;active_slabs&gt; &lt;num_slabs&gt; &lt;sharedavail&gt;
+bridge_fdb_cache       0      0     64   59    1 : tunables  120   60    0 : slabdata      0      0      0
+nf_conntrack_expect      0      0    240   16    1 : tunables  120   60    0 : slabdata      0      0      0
+nf_conntrack_ffffffff81f6f600      0      0    304   13    1 : tunables   54   27    0 : slabdata      0      0      0
+iser_descriptors       0      0    128   30    1 : tunables  120   60    0 : slabdata      0      0      0
+ib_mad                 0      0    448    8    1 : tunables   54   27    0 : slabdata      0      0      0
+fib6_nodes            22     59     64   59    1 : tunables  120   60    0 : slabdata      1      1      0
+ip6_dst_cache         13     24    320   12    1 : tunables   54   27    0 : slabdata      2      2      0
+ndisc_cache            1     10    384   10    1 : tunables   54   27    0 : slabdata      1      1      0
+ip6_mrt_cache          0      0    128   30    1 : tunables  120   60    0 : slabdata      0      0      0
+</code></pre></li>
+<li><p>&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x91CA;&#x653E;&#x5185;&#x5B58;&#x7F13;&#x5B58;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;/proc/sys/vm/drop_caches&#x6765;&#x91CA;&#x653E;</p>
+<pre><code>#To free pagecache, use
+echo 1 &gt; /proc/sys/vm/drop_caches
+#To free dentries and inodes, use 
+echo 2 &gt; /proc/sys/vm/drop_caches
+#To free pagecache, dentries and inodes, use
+echo 3 &gt;/proc/sys/vm/drop_cache
+</code></pre></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="new和malloc.html" class="navigation navigation-prev " aria-label="Previous page: new和malloc">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../C++11.html" class="navigation navigation-next " aria-label="Next page: C++11">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux内存","level":"1.2.5.9","depth":3,"next":{"title":"C++11","level":"1.2.6","depth":2,"path":"C++/C++11.md","ref":"C++/C++11.md","articles":[{"title":"auto/decltype","level":"1.2.6.1","depth":3,"path":"C++/C++11/auto&decltype.md","ref":"C++/C++11/auto&decltype.md","articles":[]},{"title":"overrride&final","level":"1.2.6.2","depth":3,"path":"C++/C++11/overrride&final.md","ref":"C++/C++11/overrride&final.md","articles":[]},{"title":"default&delete","level":"1.2.6.3","depth":3,"path":"C++/C++11/default&delete.md","ref":"C++/C++11/default&delete.md","articles":[]},{"title":"explicit","level":"1.2.6.4","depth":3,"path":"C++/C++11/explicit.md","ref":"C++/C++11/explicit.md","articles":[]},{"title":"委托构造函数","level":"1.2.6.5","depth":3,"path":"C++/C++11/委托构造函数.md","ref":"C++/C++11/委托构造函数.md","articles":[]},{"title":"成员初始化列表","level":"1.2.6.6","depth":3,"path":"C++/C++11/成员初始化列表.md","ref":"C++/C++11/成员初始化列表.md","articles":[]},{"title":"lambda","level":"1.2.6.7","depth":3,"path":"C++/C++11/lambda.md","ref":"C++/C++11/lambda.md","articles":[]},{"title":"智能指针","level":"1.2.6.8","depth":3,"path":"C++/C++11/智能指针.md","ref":"C++/C++11/智能指针.md","articles":[]},{"title":"nullptr","level":"1.2.6.9","depth":3,"path":"C++/C++11/nullptr.md","ref":"C++/C++11/nullptr.md","articles":[]}]},"previous":{"title":"new和malloc","level":"1.2.5.8","depth":3,"path":"C++/内存管理/new和malloc.md","ref":"C++/内存管理/new和malloc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Run","language":"zh-hans","gitbook":"*","description":"知识树"},"file":{"path":"C++/内存管理/Linux内存.md","mtime":"2021-11-28T02:54:35.002Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-28T13:56:23.536Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
