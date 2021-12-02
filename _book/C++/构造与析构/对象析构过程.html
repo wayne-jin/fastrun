@@ -561,7 +561,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5.8" data-path="../内存管理/new和malloc.html">
+        <li class="chapter " data-level="1.2.5.8" data-path="../内存管理/new的三种方式.html">
+            
+                <a href="../内存管理/new的三种方式.html">
+            
+                    
+                    new的三种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.9" data-path="../内存管理/new和malloc.html">
             
                 <a href="../内存管理/new和malloc.html">
             
@@ -574,7 +587,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5.9" data-path="../内存管理/Linux内存.html">
+        <li class="chapter " data-level="1.2.5.10" data-path="../内存管理/Linux内存.html">
             
                 <a href="../内存管理/Linux内存.html">
             
@@ -2568,7 +2581,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对象析构过程","level":"1.2.4.5","depth":3,"next":{"title":"内存管理","level":"1.2.5","depth":2,"path":"C++/内存管理.md","ref":"C++/内存管理.md","articles":[{"title":"内存对齐","level":"1.2.5.1","depth":3,"path":"C++/内存管理/内存对齐.md","ref":"C++/内存管理/内存对齐.md","articles":[]},{"title":"内存分配方式","level":"1.2.5.2","depth":3,"path":"C++/内存管理/内存分配方式.md","ref":"C++/内存管理/内存分配方式.md","articles":[]},{"title":"简单对象","level":"1.2.5.3","depth":3,"path":"C++/内存管理/简单对象.md","ref":"C++/内存管理/简单对象.md","articles":[]},{"title":"常见的内存错误","level":"1.2.5.4","depth":3,"path":"C++/内存管理/常见的内存错误.md","ref":"C++/内存管理/常见的内存错误.md","articles":[]},{"title":"内存泄漏","level":"1.2.5.5","depth":3,"path":"C++/内存管理/内存泄漏.md","ref":"C++/内存管理/内存泄漏.md","articles":[]},{"title":"深拷贝和浅拷贝","level":"1.2.5.6","depth":3,"path":"C++/内存管理/深拷贝与浅拷贝.md","ref":"C++/内存管理/深拷贝与浅拷贝.md","articles":[]},{"title":"程序编译过程","level":"1.2.5.7","depth":3,"path":"C++/内存管理/程序编译过程.md","ref":"C++/内存管理/程序编译过程.md","articles":[]},{"title":"new和malloc","level":"1.2.5.8","depth":3,"path":"C++/内存管理/new和malloc.md","ref":"C++/内存管理/new和malloc.md","articles":[]},{"title":"Linux内存","level":"1.2.5.9","depth":3,"path":"C++/内存管理/Linux内存.md","ref":"C++/内存管理/Linux内存.md","articles":[]}]},"previous":{"title":"禁止拷贝","level":"1.2.4.4","depth":3,"path":"C++/构造与析构/禁止拷贝.md","ref":"C++/构造与析构/禁止拷贝.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Run","language":"zh-hans","gitbook":"*","description":"知识树"},"file":{"path":"C++/构造与析构/对象析构过程.md","mtime":"2021-11-14T14:54:37.449Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-28T13:56:23.536Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"对象析构过程","level":"1.2.4.5","depth":3,"next":{"title":"内存管理","level":"1.2.5","depth":2,"path":"C++/内存管理.md","ref":"C++/内存管理.md","articles":[{"title":"内存对齐","level":"1.2.5.1","depth":3,"path":"C++/内存管理/内存对齐.md","ref":"C++/内存管理/内存对齐.md","articles":[]},{"title":"内存分配方式","level":"1.2.5.2","depth":3,"path":"C++/内存管理/内存分配方式.md","ref":"C++/内存管理/内存分配方式.md","articles":[]},{"title":"简单对象","level":"1.2.5.3","depth":3,"path":"C++/内存管理/简单对象.md","ref":"C++/内存管理/简单对象.md","articles":[]},{"title":"常见的内存错误","level":"1.2.5.4","depth":3,"path":"C++/内存管理/常见的内存错误.md","ref":"C++/内存管理/常见的内存错误.md","articles":[]},{"title":"内存泄漏","level":"1.2.5.5","depth":3,"path":"C++/内存管理/内存泄漏.md","ref":"C++/内存管理/内存泄漏.md","articles":[]},{"title":"深拷贝和浅拷贝","level":"1.2.5.6","depth":3,"path":"C++/内存管理/深拷贝与浅拷贝.md","ref":"C++/内存管理/深拷贝与浅拷贝.md","articles":[]},{"title":"程序编译过程","level":"1.2.5.7","depth":3,"path":"C++/内存管理/程序编译过程.md","ref":"C++/内存管理/程序编译过程.md","articles":[]},{"title":"new的三种方式","level":"1.2.5.8","depth":3,"path":"C++/内存管理/new的三种方式.md","ref":"C++/内存管理/new的三种方式.md","articles":[]},{"title":"new和malloc","level":"1.2.5.9","depth":3,"path":"C++/内存管理/new和malloc.md","ref":"C++/内存管理/new和malloc.md","articles":[]},{"title":"Linux内存","level":"1.2.5.10","depth":3,"path":"C++/内存管理/Linux内存.md","ref":"C++/内存管理/Linux内存.md","articles":[]}]},"previous":{"title":"禁止拷贝","level":"1.2.4.4","depth":3,"path":"C++/构造与析构/禁止拷贝.md","ref":"C++/构造与析构/禁止拷贝.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Run","language":"zh-hans","gitbook":"*","description":"知识树"},"file":{"path":"C++/构造与析构/对象析构过程.md","mtime":"2021-11-14T14:54:37.449Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-02T13:24:59.324Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
